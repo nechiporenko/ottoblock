@@ -1,0 +1,54 @@
+﻿@import "../../modules/_base.scss";
+/*Infograph*/
+.b-info{
+    position:relative;
+    max-width:992px;
+    margin:0 auto;
+}
+.b-info__img{
+    display:block;
+    margin:0 auto $project-line-height;
+}
+
+.b-info__item{
+    line-height:1.7;
+}
+
+.b-info__title{
+    display:block;
+    line-height:1.7;
+    font-family:$font-bold;
+    @include font-size(14px);
+    text-transform:uppercase;
+}
+
+@include media($desktop){
+    .b-info{
+        min-height:370px; //зададим мин.высоту, т.к. картинка будет подгружаться скриптом при скролле
+    }
+
+    .b-info__list{
+        list-style-type:none;
+    }
+
+    .b-info__item{
+        display:block;
+        width:250px;
+        position:absolute;
+
+        &:first-child{
+            top:110px; left: 100px;
+        }
+        &:nth-child(2){
+            top:240px; left: 100px;
+        }
+        &:nth-child(3){
+            top:60px;
+            left:680px;
+        }
+        &:nth-child(4){
+            top:190px;
+            left:680px;
+        }
+    }
+}

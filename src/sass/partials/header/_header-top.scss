@@ -1,0 +1,169 @@
+﻿@import "../../modules/_base.scss";
+/*Header top*/
+.b-header__top{
+    padding:5px 0;
+    height:44px;
+    background:#fff;
+    box-sizing:border-box;
+    box-shadow:0 1px 2px rgba(#000, .1);
+
+    .g-container{
+        position:relative;
+        padding-left:90px;
+    }
+
+    @include media($desktop){
+        height:66px;
+        padding:16px 0;
+        background:#f9f9f9;
+        box-shadow:none;
+
+        .g-container{
+            padding-left:200px;
+        }
+    }
+}
+
+.h-top{
+    list-style-type:none;
+    margin:0;
+    font-size:1px;
+    line-height:0;
+}
+
+.h-top__item{
+    display:inline-block;
+    vertical-align:middle;
+    line-height:normal;
+    @include font-size(15px);
+    text-align:center;
+}
+
+
+//desktop content
+.h-top--xl{
+    display:none;
+    padding:0 38px;
+    text-align:justify;
+    text-align-last:justify;
+
+    &:after{
+        content:'';
+        display:inline-block;
+        width:100%;
+        height:0;
+        visibility:hidden;
+        overflow:hidden;
+    }
+
+    @include media($desktop){
+        display:block;
+    }
+}
+
+.h-top__addr{
+    display:block;
+    height:34px;
+    line-height:34px;
+    white-space:nowrap;
+    text-decoration:none;
+    color:$text-color;
+
+    &:hover,
+    &:active{
+        color:$primary-alt-1;
+    }
+}
+
+.h-top__tel{
+    @extend .h-top__addr;    
+}
+
+.h-top__callback{
+    @extend .g-clearbutton;
+    height:34px;
+    line-height:34px;
+
+    &:hover,
+    &:active{
+        color:$primary-alt-1;
+        .g-dot-border{
+            border-color:$primary-alt-1;
+        }
+    }
+}
+
+.h-top__search{
+    @extend .h-top__callback;
+    padding:0 10px;
+    @include font-size(17px);
+}
+
+.h-top__order{
+    @extend .g-btn;
+    padding:0 15px;
+    height:34px;
+    line-height:34px;
+    background:$primary-alt-1;
+
+    &:hover,
+    &:active,
+    &:focus{
+        background:darken($primary-alt-1, 3%);
+    }
+}
+
+//mobile content
+.h-top--xs{
+    padding:0;
+    float:right;
+
+    .h-top__item{
+        margin-left:5px;
+
+        &:first-child{
+            margin-left:0;
+        }
+    }
+
+    .h-top__callback,
+    .h-top__search,
+    .h-top__menu{
+        padding:0 10px;
+        font-size:rem(17px);
+        [class^="icon-"]:before, [class*=" icon-"]:before{
+            margin:0;
+        }
+    }
+
+    .h-top__order,
+    .h-top__tel{
+        display:none;
+    }
+
+    @include media($small){
+        .h-top__order{
+            display:inline-block;
+        }
+    }
+
+    @include media($tablet){
+        .h-top__tel{
+            display:inline-block;
+            margin-right:25px;
+        }
+    }
+
+    @include media($desktop){
+        display:none;
+    }
+}
+
+.h-top__menu{
+    @extend .h-top__search;
+}
+
+
+
+
+

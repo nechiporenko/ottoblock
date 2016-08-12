@@ -1,0 +1,34 @@
+﻿@import "../../modules/_base.scss";
+/*Review Form*/
+.b-review-form{
+    @extend .g-clearfix;
+
+    .g-textarea{
+        min-height:72px;
+    }
+}
+
+.b-review-form__main,
+.b-review-form__rating{
+    @extend .g-column;
+}
+@include media($large){
+    .b-review-form__main{
+        width:77.6699%;
+    }
+    .b-review-form__rating{
+        width:22.3301%;
+        padding-left:30px;
+
+        .g-btn{
+            width:100%;
+        }
+    }
+}
+
+.b-review-form__title{
+    display:block;
+    letter-spacing:rem(.6px);
+    @include font-size(18px);
+    white-space:nowrap;
+}

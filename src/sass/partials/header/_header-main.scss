@@ -1,0 +1,15 @@
+﻿@import "../../modules/_base.scss";
+/*Header main*/
+.b-header__main{
+    display:none;
+    height:64px;
+    background:#fff;
+
+    .g-container{
+        padding-left:200px;
+    }
+
+    @include media($desktop){
+        display:block;
+    }
+}

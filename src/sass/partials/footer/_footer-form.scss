@@ -1,0 +1,69 @@
+﻿@import "../../modules/_base.scss";
+/*Footer order form*/
+$f-color:#a2a0c3;
+.b-footer__form{
+    padding:30px 0;
+
+    @include media($desktop){
+        padding:50px 0;
+
+        .g-input-field{
+            padding-right:0;
+            &:after{
+                right:-20px;
+            }
+        }
+    }
+}
+.f-form{
+    max-width:420px;
+    padding:0 20px;
+    margin:0 auto;
+    box-sizing:border-box;
+
+    .g-input,
+    .g-select,
+    .g-textarea{
+        background:none;
+        border-color:$f-color;
+        color:#fff;
+        @include placeholder{
+            color:#fff;
+        }
+
+        &:hover,
+        &:focus{
+            border-color:#fff;
+        }
+    }
+}
+
+.f-form__header{
+    margin-bottom:30px;
+    text-align:center;
+    @include font-size(14px);
+    line-height:1.15;
+    color:$f-color;
+}
+.f-form__title{
+    display:block;
+    margin-bottom:$project-line-height;
+    line-height:1;
+    font-family:$font-bold;
+    color:#fff;
+    text-transform:uppercase;
+    @include font-size(24px);
+}
+
+.f-form__btn{
+    @extend .g-btn;
+    height:44px;
+    line-height:44px;
+    background:$primary-alt-1;
+
+    &:hover,
+    &:active,
+    &:focus{
+        background:darken($primary-alt-1, 3%);
+    }
+}

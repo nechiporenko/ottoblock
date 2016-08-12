@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="ru"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru"> <!--<![endif]-->
+<head>
+    <title>Ottoblock Doctor's Page</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Page Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <script src="js/vendor/modernizr.min.js"></script>
+    <link rel="stylesheet" href="css/app.min.css">
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="page">
+    <!--header-->
+    <header class="b-header">
+        <div class="b-header__top">
+            <div class="g-container">
+                <a href="index.html" class="h-logo">
+                    <figure class="h-logo__inner">
+                        <img src="img/logo.png" class="h-logo__img" />
+                        <figcaption class="h-logo__caption">
+                            <span class="h-logo__title">Компания «АЕ. Брик»</span>
+                            Официальный представитель с 1997 года
+                        </figcaption>
+                    </figure>
+                </a>
+                <!--mobile header-top content-->
+                <ul class="h-top h-top--xs">
+                    <li class="h-top__item">
+                        <a href="tel:+380445696929" class="h-top__tel">
+                            <span class="g-light-text">(044) </span>569 69 29
+                        </a>
+                    </li>
+                    <li class="h-top__item">
+                        <button type="button" class="h-top__callback" data-modal="#callback">
+                            <i class="icon-phone">&nbsp;</i>
+                        </button>
+                    </li>
+                    <li class="h-top__item">
+                        <button type="button" class="h-top__search js-search-toggle">
+                            <i class="icon-search">&nbsp;</i>
+                        </button>
+                    </li>
+                    <li class="h-top__item">
+                        <button type="button" class="h-top__order" data-modal="#order">
+                            Отправить заявку
+                        </button>
+                    </li>
+                    <li class="h-top__item">
+                        <button type="button" class="h-top__menu js-mmenu-toggle">
+                            <i class="icon-menu">&nbsp;</i>
+                        </button>
+                    </li>
+                </ul>
+                <!--/mobile header-top content-->
+                <!--desktop top-header content-->
+                <ul class="h-top h-top--xl">
+                    <li class="h-top__item">
+                        <a href="contacts.html" class="h-top__addr"><span class="g-light-text">г.Киев</span>, ул.Раисы Окипной, 4</a>
+                    </li>
+                    <li class="h-top__item">
+                        <a href="tel:+380445696929" class="h-top__tel">
+                            <span class="g-light-text">(044) </span>569 69 29
+                        </a>
+                    </li>
+                    <li class="h-top__item">
+                        <button type="button" class="h-top__callback" data-modal="#callback">
+                            <span class="g-dot-border">Обратный звонок</span>
+                        </button>
+                    </li>
+                    <li class="h-top__item">
+                        <button type="button" class="h-top__search js-search-toggle"><i class="icon-search">&nbsp;</i></button>
+                        <button type="button" class="h-top__order" data-modal="#order">Отправить заявку</button>
+                    </li>
+                </ul>
+                <!--/desktop top-header content-->
+            </div>
+        </div><!--/.b-header__top-->
+        <div class="b-header__main">
+            <nav class="g-container">
+                <!--desktop main menu-->
+                <ul class="h-menu">
+                    <li class="h-menu__item">
+                        <a href="about.html" class="h-menu__link">О компании</a>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="contacts.html" class="h-menu__link">Контакты</a>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="sertificates.html" class="h-menu__link">Сертификаты</a>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="specialists.html" class="h-menu__link current">Специалисты</a>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="quetions.html" class="h-menu__link">Вопросы</a>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="reviews.html" class="h-menu__link">Отзывы</a>
+                    </li>
+                </ul>
+                <!--/desktop main menu-->
+            </nav>
+        </div><!--/.b-header__main-->
+        <div class="b-header__catalog js-sticky-header">
+            <nav class="g-container">
+                <!--desktop catalog menu-->
+                <ul class="h-cat js-menu">
+                    <li class="h-cat__item">
+                        <a href="catalog.html" class="h-cat__link">Протезирование</a>
+                        <ul class="h-subcat">
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Комфорт и безопасность для активных пользователей протезов</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Линия C-Leg ®</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Протезирование нижних конечностей</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Протезирование верхних конечностей</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Детское протезирование верхних и нижних конечностей</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Спортивные протезы</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Водостойкий протез Aqualine</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Средства по уходу за кожей Derma</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Чехлы на культю ОТТО БОКК Чехлы на культю*</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Защита и уход – чехлы на культю Derma Seal*</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Easy-Proth® вспомогательный мешок для одевания протеза</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Компрессионные чехлы на культю</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Протез голени</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Косметические протезы пальцев</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Протезирование в Германии</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="h-cat__item">
+                        <a href="#" class="h-cat__link">Ортопедия</a>
+                        <ul class="h-subcat">
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Ортопедические стельки</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Полустельки, силиконовая продукция</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Инвалидные коляски для взрослых</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Инвалидные коляски для детей</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Насадки на унитаз</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="h-cat__item">
+                        <a href="#" class="h-cat__link">Реабилитация</a>
+                        <ul class="h-subcat">
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Поддерживающие бандажи на бедро</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">НАКОЛЕННИК для протеза голени</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">ЛАЙНЕРЫ С ТЕХНОЛОГИЕЙ SKINGUARD</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Средства по уходу за кожей Derma</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Easy-Proth® вспомогательный мешок для одевания протеза</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Защита и уход – чехлы на культю Derma Seal*</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Чехлы на культю ОТТО БОКК Чехлы на культю*</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Компрессионные чехлы на культю</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="h-cat__item">
+                        <a href="#" class="h-cat__link">Специалистам</a>
+                        <ul class="h-subcat">
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">КАТАЛОГИ</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Оборудование для протезно-ортопедических мастерских</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Комплектующие для протезов верхних конечностей</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Комплектующие для протезов нижних конечностей</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Материалы для протезно-ортопедических изделий</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--/desktop catalog menu-->
+            </nav>
+        </div><!--/.b-header__catalog-->
+        <!--search form-->
+        <div class="b-search js-search">
+            <div class="b-search__wrapper">
+                <div class="b-search__inner">
+                    <div class="b-search__container">
+                        <span class="b-search__title">Введите слово и нажмите Enter</span>
+                        <form>
+                            <div class="g-row">
+                                <div class="g-col g-col--two-thirds">
+                                    <input type="text" class="b-search__input" placeholder="Что будем искать?" />
+                                </div>
+                                <div class="g-col g-col--one-third">
+                                    <button type="submit" class="b-search__btn">
+                                        Найти
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <button type="button" class="b-search__close">
+                            <i class="icon-cancel">&nbsp;</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/search form-->
+    </header>
+    <!--/header-->
+
+
+    <!--main content-->
+    <main class="page__content">
+        <div class="g-container">
+            <header class="page__header">
+                <!--breadcrumbs-->
+                <ol class="breadcrumbs">
+                    <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                        <a href="index.html" class="breadcrumbs__link" itemprop="url">
+                            <span itemprop="title">Главная</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                        <a href="specialists.html" class="breadcrumbs__link" itemprop="url">
+                            <span itemprop="title">Специалисты</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        Егорченков Евгений Евгениевич
+                    </li>
+                </ol>
+                <!--/breadcrumbs-->
+            </header>
+            
+            <!--doctor info-->
+            <div class="page__block">
+                <div class="b-doctor">
+                    <figure class="b-doctor__photo">
+                        <div class="b-doctor__thumb">
+                            <img src="img/loader.gif" class="b-doctor__img js-lazyimg" data-src="http://placehold.it/300x300" alt="" />
+                            <noscript>
+                                <img src="http://placehold.it/300x300" class="b-doctor__img" alt="" />
+                            </noscript>
+                        </div>
+                        <figcaption class="b-doctor__rating">
+                            <div class="b-rating js-rating" data-readonly="1" data-rating="5.0">
+                                <span class="b-rating__value"></span>
+                                <select class="b-rating__select">
+                                    <option value="" label="empty"></option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                            <a href="#review" class="b-doctor__reviewlink">278 отзывов</a>
+                        </figcaption>
+                    </figure>
+
+                    <article class="b-doctor__info">
+                        <header class="p-header">
+                            <h1 class="p-title">Егорченков Евгений Евгениевич</h1>
+                            <p class="p-header__subtitle">Руководитель лаборатории протезирования</p>
+                        </header>
+                        <p>Специалист в области протезирования верхних и нижних конечностей с 26-летним стажем. Сертифицирован ф.Otto Bock HealthCare GmbH. Aenean ut fringilla turpis. Nam tincidunt eget ex maximus imperdiet. Mauris lobortis, tellus non iaculis finibus, erat ligula accumsan mauris, non varius libero dui et odio.Vestibulum gravida viverra ex in laoreet. Ut et dui sodales, pulvinar tellus nec, bibendum est. Nunc malesuada sed mi sed pretium.</p>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                    </article>
+                </div>
+            </div><!--/.page__block-->
+            <!--/doctor info-->
+
+            <!--doctor details-->
+            <article>
+                <h2 class="g-subtitle g-text-center">О специалисте</h2>
+                <div class="page__block">
+                    <p>Phasellus ullamcorper enim augue, a accumsan velit gravida a. Nunc diam nisl, ultrices a hendrerit ut, pretium quis tortor. Suspendisse efficitur, ante ac consectetur mollis, ligula velit fermentum tortor, in placerat turpis ante et massa. In nec metus et dui vulputate condimentum sit amet volutpat purus. Pellentesque aliquam augue at maximus luctus. Sed finibus sem vitae purus convallis, eget dictum nulla accumsan.</p>
+                    <p>Опыт работы:</p>
+                    <ul>
+                        <li>1990 – 1995 гг. - In nec metus et dui vulputate condimentum sit amet volutpat purus. Pellentesque aliquam augue at maximus;</li>
+                        <li>2005 – 2010 гг. - Nunc diam nisl, ultrices a hendrerit ut, pretium quis tortor. Suspendisse efficitur, ante ac consectetur mollis, ligula velit fermentum tortor, in placerat turpis ante et massa;</li>
+                        <li>2010 – настоящее время - Suspendisse efficitur, ante ac consectetur mollis, ligula velit fermentum tortor, in placerat turpis ante et massa. In nec metus et dui vulputate condimentum sit amet volutpat purus</li>
+                    </ul>
+                    <hr />
+                    <h3>Образование</h3>
+                    <ul>
+                        <li>In nec metus et dui vulputate condimentum sit amet volutpat purus. Pellentesque aliquam augue at maximus (1895 г.);</li>
+                        <li>Nunc diam nisl, ultrices a hendrerit ut, pretium quis tortor. Suspendisse efficitur, ante ac consectetur mollis, ligula velit fermentum tortor, in placerat turpis ante et massa (1898 г.);</li>
+                        <li>Suspendisse efficitur, ante ac consectetur mollis, ligula velit fermentum tortor, in placerat turpis ante et massa. In nec metus et dui vulputate condimentum sit amet volutpat purus (1898 г.).</li>
+                    </ul>
+                    <hr />
+                    <h3>Курсы</h3>
+                    <ul>
+                        <li>In nec metus et dui vulputate condimentum sit amet volutpat purus. Pellentesque aliquam augue at maximus (1895 г.);</li>
+                        <li>Nunc diam nisl, ultrices a hendrerit ut, pretium quis tortor. Suspendisse efficitur, ante ac consectetur mollis, ligula velit fermentum tortor, in placerat turpis ante et massa (1898 г.);</li>
+                        <li>Suspendisse efficitur, ante ac consectetur mollis, ligula velit fermentum tortor, in placerat turpis ante et massa. In nec metus et dui vulputate condimentum sit amet volutpat purus (1898 г.).</li>
+                    </ul>
+                    <hr />
+                    <h3>Участие в ассоциациях</h3>
+                    <ul>
+                        <li>In nec metus et dui vulputate condimentum sit amet volutpat purus. Pellentesque aliquam augue at maximus (1895 г.);</li>
+                        <li>Nunc diam nisl, ultrices a hendrerit ut, pretium quis tortor. Suspendisse efficitur, ante ac consectetur mollis, ligula velit fermentum tortor, in placerat turpis ante et massa (1898 г.);</li>
+                        <li>Suspendisse efficitur, ante ac consectetur mollis, ligula velit fermentum tortor, in placerat turpis ante et massa. In nec metus et dui vulputate condimentum sit amet volutpat purus (1898 г.).</li>
+                    </ul>
+                    <hr />
+                    <h3>Сертификаты</h3>
+                    <!--diplomas slider-->
+                    <div class="b-diploma">
+                        <ul class="b-diploma__list js-diploma-slider">
+                            <li class="b-diploma__item">
+                                <a href="img/del/diploma01-xl.png" class="b-diploma__link">
+                                    <img src="img/loader.gif" class="b-diploma__img" data-src="img/del/diploma01.jpg" alt="" />
+                                    <noscript>
+                                        <img src="img/del/diploma01.jpg" class="b-diploma__img" alt="" />
+                                    </noscript>
+                                </a>
+                            </li>
+                            <li class="b-diploma__item">
+                                <a href="img/del/diploma02-xl.png" class="b-diploma__link">
+                                    <img src="img/loader.gif" class="b-diploma__img" data-src="img/del/diploma02.jpg" alt="" />
+                                    <noscript>
+                                        <img src="img/del/diploma02.jpg" class="b-diploma__img" alt="" />
+                                    </noscript>
+                                </a>
+                            </li>
+                            <li class="b-diploma__item">
+                                <a href="img/del/diploma03-xl.png" class="b-diploma__link">
+                                    <img src="img/loader.gif" class="b-diploma__img" data-src="img/del/diploma03.jpg" alt="" />
+                                    <noscript>
+                                        <img src="img/del/diploma03.jpg" class="b-diploma__img" alt="" />
+                                    </noscript>
+                                </a>
+                            </li>
+                            <li class="b-diploma__item">
+                                <a href="img/del/diploma04-xl.png" class="b-diploma__link">
+                                    <img src="img/loader.gif" class="b-diploma__img" data-src="img/del/diploma04.jpg" alt="" />
+                                    <noscript>
+                                        <img src="img/del/diploma04.jpg" class="b-diploma__img" alt="" />
+                                    </noscript>
+                                </a>
+                            </li>
+                            <li class="b-diploma__item">
+                                <a href="img/del/diploma05-xl.png" class="b-diploma__link">
+                                    <img src="img/loader.gif" class="b-diploma__img" data-src="img/del/diploma05.png" alt="" />
+                                    <noscript>
+                                        <img src="img/del/diploma05.png" class="b-diploma__img" alt="" />
+                                    </noscript>
+                                </a>
+                            </li>
+                            <li class="b-diploma__item">
+                                <a href="img/del/diploma06-xl.png" class="b-diploma__link">
+                                    <img src="img/loader.gif" class="b-diploma__img" data-src="img/del/diploma06.png" alt="" />
+                                    <noscript>
+                                        <img src="img/del/diploma06.png" class="b-diploma__img" alt="" />
+                                    </noscript>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/diplomas slider-->
+                </div><!--/.page__block-->
+            </article>
+            <!--/doctor details-->
+
+            <!--reviews section-->
+            <section id="review">
+                <h4 class="g-subtitle g-text-center">Отзывы клиентов</h4>
+                <div class="page__block">
+                    <h5>Оставить отзыв</h5>
+                    <p>Phasellus ullamcorper enim augue, a accumsan velit gravida a. Nunc diam nisl, ultrices a hendrerit ut, pretium quis tortor. Suspendisse efficitur, ante ac consectetur mollis, ligula velit fermentum tortor, in placerat turpis ante et massa</p>
+
+                    <!--review form-->
+                    <form class="b-review-form">
+                        <div class="b-review-form__main">
+                            <div class="g-input-field">
+                                <textarea class="g-textarea" placeholder="Ваш отзыв о специалисте"></textarea>
+                            </div>
+                            <div class="g-row">
+                                <div class="g-col g-col--one-half">
+                                    <div class="g-input-field">
+                                        <input type="text" class="g-input" placeholder="Ваше имя" required />
+                                    </div>
+                                </div>
+                                <div class="g-col g-col--one-half">
+                                    <div class="g-input-field">
+                                        <input type="email" class="g-input" placeholder="Email" required />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="b-review-form__rating">
+                            <span class="b-review-form__title">Оцените специалиста</span>
+                            <div class="b-rating js-rating" data-readonly="0" data-rating="0.0">
+                                <select class="b-rating__select">
+                                    <option value="" label="empty"></option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="g-btn">Отправить</button>
+                        </div>
+                    </form>
+                    <!--/review form-->
+
+                    <hr />
+                    <h5>Все отзывы</h5>
+                    <!--review-->
+                    <div class="b-review">
+                        <div class="b-review__meta">
+                            <span class="b-review__name">Николай</span>
+                            <time datetime="2016-04-28T23:16:54" class="b-review__date">28.04.2016</time>
+                        </div>
+                        <div class="b-rating js-rating" data-readonly="1" data-rating="5.0">
+                            <span class="b-rating__value"></span>
+                            <select class="b-rating__select">
+                                <option value="" label="empty"></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <p>Nullam nulla tortor, venenatis eu aliquet eget, rhoncus non nulla. Morbi maximus tincidunt tortor, ac blandit ex pellentesque pulvinar. Ut quis turpis quis elit vehicula lobortis vitae eget dolor. Aliquam sodales leo erat, nec ultrices nisi aliquam vitae. Aliquam tristique eros nec ex tincidunt, et pulvinar est ultrices. Aenean sit amet aliquam nulla. Donec ultrices, risus ut posuere mattis, erat mauris vehicula massa, ac porttitor nibh nunc sed nisi. Nullam vitae sodales nunc. Suspendisse feugiat rutrum diam. Mauris interdum tempus mi eu maximus. Praesent in eleifend libero, sit amet egestas metus. Sed gravida et metus quis rutrum. Vivamus ac ultricies est.</p>
+                    </div>
+                    <!--/review-->
+
+                    <!--review-->
+                    <div class="b-review">
+                        <div class="b-review__meta">
+                            <span class="b-review__name">Дарья</span>
+                            <time datetime="2016-04-26T23:00:00" class="b-review__date">26.04.2016</time>
+                        </div>
+                        <div class="b-rating js-rating" data-readonly="1" data-rating="3.5">
+                            <span class="b-rating__value"></span>
+                            <select class="b-rating__select">
+                                <option value="" label="empty"></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <p>Nullam nulla tortor, venenatis eu aliquet eget, rhoncus non nulla. Morbi maximus tincidunt tortor, ac blandit ex pellentesque pulvinar. Ut quis turpis quis elit vehicula lobortis vitae eget dolor. Aliquam sodales leo erat, nec ultrices nisi aliquam vitae. Aliquam tristique eros nec ex tincidunt, et pulvinar est ultrices. Aenean sit amet aliquam nulla.</p>
+                    </div>
+                    <!--/review-->
+                </div><!--/.page__block-->
+            </section>
+            <!--/reviews section-->
+
+            <footer class="page__footer">
+                <button type="button" class="g-btn g-btn--alt g-btn--wide">Показать еще отзывы</button>
+            </footer>
+        </div><!--/.g-container-->
+
+        <!--modal windows-->
+        <div class="modal" id="callback">
+            <form class="modal__content">
+                <span class="g-title">Заказать обратный звонок</span>
+                <p>Укажите Ваше имя и номер телефона, и мы перезвоним Вам в ближайшее время</p>
+                <div class="g-row">
+                    <div class="g-col g-col--one-half">
+                        <div class="g-input-field">
+                            <label class="g-visuallyhidden">Ваше имя</label>
+                            <input type="text" class="g-input" placeholder="Ваше имя" required />
+                        </div>
+                    </div>
+                    <div class="g-col g-col--one-half">
+                        <div class="g-input-field">
+                            <label class="g-visuallyhidden">Ваш телефон</label>
+                            <input type="text" class="g-input js-phone-input" placeholder="Номер телефона" required />
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="g-btn">Отправить</button>
+            </form>
+        </div>
+
+        <div class="modal" id="order">
+            <form class="modal__content">
+                <span class="g-title">Отправить заявку</span>
+                <p>Если у вас есть вопросы или вы хотите заказать товар, нужно заполнить поля, отправить заявку и мы вам обязательно перезвоним </p>
+                <div class="g-row">
+                    <div class="g-col g-col--one-half">
+                        <div class="g-input-field">
+                            <label class="g-visuallyhidden">Ваше имя</label>
+                            <input type="text" class="g-input" placeholder="Ваше имя" required />
+                        </div>
+                    </div>
+                    <div class="g-col g-col--one-half">
+                        <div class="g-input-field">
+                            <label class="g-visuallyhidden">Ваш телефон</label>
+                            <input type="text" class="g-input js-phone-input" placeholder="Номер телефона" required />
+                        </div>
+                    </div>
+                </div>
+                <div class="g-input-field">
+                    <label class="g-visuallyhidden">Комментарий</label>
+                    <textarea class="g-textarea" placeholder="Комментарий"></textarea>
+                </div>
+                <button type="submit" class="g-btn">Отправить</button>
+            </form>
+        </div>
+
+        <!--/modal windows-->
+    </main>
+    <!--/main content-->
+
+    <!--footer-->
+    <footer class="b-footer">
+        <!--mobile menu-->
+        <nav class="page__panel js-mmenu">
+            <ul class="m-menu">
+                <li class="m-menu__item">
+                    <label class="m-menu__label">Меню</label>
+                </li>
+                <li class="m-menu__item">
+                    <a href="#" class="m-menu__link">Протезирование</a>
+                </li>
+                <li class="m-menu__item">
+                    <a href="#" class="m-menu__link">Ортопедия</a>
+                </li>
+                <li class="m-menu__item">
+                    <a href="#" class="m-menu__link">Реабилитация</a>
+                </li>
+                <li class="m-menu__item">
+                    <a href="#" class="m-menu__link">Специалистам</a>
+                </li>
+                <li class="m-menu__divider"></li>
+                <li class="m-menu__item">
+                    <a href="about.html" class="m-menu__link">О компании</a>
+                </li>
+                <li class="m-menu__item">
+                    <a href="contacts.html" class="m-menu__link">Контакты</a>
+                </li>
+                <li class="m-menu__item">
+                    <a href="sertificates.html" class="m-menu__link">Сертификаты</a>
+                </li>
+                <li class="m-menu__item">
+                    <a href="specialists.html" class="m-menu__link">Специалисты</a>
+                </li>
+                <li class="m-menu__item">
+                    <a href="quetions.html" class="m-menu__link">Вопросы</a>
+                </li>
+                <li class="m-menu__item">
+                    <a href="reviews.html" class="m-menu__link">Отзывы</a>
+                </li>
+            </ul>
+        </nav>
+        <!--/mobile menu-->
+        <!--order form-->
+        <div class="b-footer__form">
+            <div class="g-container">
+                <form class="f-form">
+                    <div class="f-form__header">
+                        <span class="f-form__title">Обратная связь</span>
+                        <p>Если у вас есть вопросы или вы хотите заказать товар, нужно заполнить поля, отправить заявкуи мы вам обязательно перезвоним</p>
+                    </div>
+
+                    <div class="g-input-field">
+                        <label class="g-visuallyhidden">Ваше имя</label>
+                        <input type="text" class="g-input" placeholder="Ваше имя" required />
+                    </div>
+                    <div class="g-input-field">
+                        <label class="g-visuallyhidden">Ваше имя</label>
+                        <input type="email" class="g-input" placeholder="Email" required />
+                    </div>
+                    <div class="g-input-field">
+                        <label class="g-visuallyhidden">Комментарий</label>
+                        <textarea class="g-textarea" placeholder="Комментарий"></textarea>
+                    </div>
+                    <div class="g-text-center">
+                        <button type="submit" class="f-form__btn">Отправить заявку</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--/order form-->
+        <!--sole-->
+        <div class="b-footer__sole">
+            <div class="g-container">
+                <span class="b-footer__copyright">Copyright by АЕ. БРИК <i class="icon-copyright">&nbsp;</i> 2011-2016</span>
+            </div>
+        </div>
+        <!--/sole-->
+    </footer>
+    <!--/footer-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/app.min.js"></script>
+</body>
+</html>

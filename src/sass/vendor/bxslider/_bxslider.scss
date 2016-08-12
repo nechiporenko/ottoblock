@@ -1,0 +1,119 @@
+﻿@import "../../modules/base";
+/** BX Slider **/
+
+$loader:   '../img/loader.gif';
+
+//layout
+.bx-wrapper {
+	position: relative;
+    margin:0 auto;
+	padding: 0;
+	-ms-touch-action: pan-y;
+	touch-action: pan-y;
+}
+
+
+
+.bx-viewport {
+	//fix other elements on the page moving (on Chrome)
+	-webkit-transform: translatez(0);
+}
+
+// THEME
+.bx-wrapper {
+	.bx-pager,
+	.bx-controls-auto {
+		position: absolute;
+        bottom: $project-line-height;
+		width: 100%;	
+	}
+}
+
+// LOADER
+.bx-wrapper .bx-loading {
+	min-height: 50px;
+	background: url($loader) center center no-repeat #fff;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+}
+
+// PAGER
+.bx-wrapper {
+	.bx-pager {
+		text-align: center;
+		font-size: .85em;
+		font-family: Arial;
+		font-weight: bold;
+		color: #e0e0e0;
+        z-index:60; //поверх элементов спмска с z-index=50
+
+		&.bx-default-pager a {
+			background: #e0e0e0;
+			@include hide-text;
+			display: block;
+			width: 10px;
+			height: 10px;
+			margin: 0 5px;
+			outline: 0;
+			border-radius: 5px;
+			&:hover,
+			&.active{
+				background: $primary-alt;
+			}
+		}
+	}
+	.bx-pager-item,
+	.bx-controls-auto .bx-controls-auto-item {
+		display: inline-block;
+	}
+	.bx-pager-item {
+		font-size: 0;
+		line-height: 0;
+	}
+}
+
+// DIRECTION CONTROLS (NEXT / PREV)
+.bx-wrapper {
+	.bx-prev {
+		left: 0;
+        text-align:left;
+	}
+	.bx-next {
+		right: 0;
+        text-align:right;
+	}
+	.bx-controls-direction a {
+		position: absolute;
+		top: 50%;
+		margin-top: -19px;
+		outline: 0;
+        @include size(38px);
+        @include font-size(30px);
+        line-height:38px;
+        text-decoration:none;
+        color:#cfcfcf;
+		z-index: 100;
+        opacity:.8;
+
+        [class^="icon-"]:before, [class*=" icon-"]:before{
+            margin:0;
+        }
+
+
+        &:hover,
+        &:active{
+            color:$primary;
+            opacity:1;
+        }
+
+        &.disabled {
+            color:#cfcfcf;
+			opacity: .3;
+            cursor:default;
+		}
+	}
+}

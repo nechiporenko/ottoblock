@@ -1,0 +1,35 @@
+﻿@import "../../modules/_base.scss";
+/*Pagination*/
+.b-pagination{
+    margin:35px 0;
+    font-size:0;
+    text-align:center;
+}
+
+.b-pagination__link,
+.b-pagination__current{
+    display:inline-block;
+    vertical-align:middle;
+    margin:0 1px;
+    @include size(28px);
+    line-height:30px;
+    @include font-size(14px);
+    font-family:$font-bold;
+    border-radius:$border-radius;
+}
+
+.b-pagination__link{
+    color:$text-color;
+    text-decoration:none;
+
+    &:hover,
+    &:active{
+        color:$primary-alt;
+    }
+}
+
+.b-pagination__current{
+    
+    color:#fff;
+    background:$primary;
+}

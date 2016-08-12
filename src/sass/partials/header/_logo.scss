@@ -1,0 +1,57 @@
+﻿@import "../../modules/_base.scss";
+
+/*HeaderLogo*/
+.h-logo{
+    position:absolute;
+    left:0;
+    top:-5px;
+    width:90px;
+    height:44px; //высота хидера на маленьком экране
+    background:#eae9f2;
+    text-decoration:none;
+    color:$text-color;
+    box-sizing:border-box;
+}
+.h-logo__inner{
+    margin:0;
+    padding:0;
+    max-width:190px;
+    overflow:hidden;
+    @extend .g-align;
+}
+.h-logo__caption{
+    display:none;
+    white-space:nowrap;
+    line-height:1.2;
+    @include font-size(8px);
+    text-transform:uppercase;
+}
+.h-logo__title{
+    display:block;
+    font-family:$font-bold;
+    @include font-size(11px);
+    @include px2rem(letter-spacing, .75px);
+}
+.h-logo__img{
+    display:block;
+    width:80px;
+    height:auto;
+}
+
+@include media($desktop){
+    .h-logo{
+        top:-16px;
+        width:200px;
+        height:130px;
+    }
+
+    .h-logo__img{
+        width:142px;
+        margin:5px 0;
+    }
+
+    .h-logo__caption{
+        display:block;
+    }
+}
+

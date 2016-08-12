@@ -1,0 +1,60 @@
+﻿@import "../../modules/_base.scss";
+/*Block's list*/
+.b-list{
+    @extend .g-clearlist;
+    @extend .g-clearfix;
+}
+
+.b-list__item{
+    @extend .g-column;
+
+    @include media($small){
+        @include span-columns(6);
+        @include omega(2n);
+    }
+
+    @include media($desktop){
+        @include omega-reset(2n);
+        @include span-columns(3);
+        @include omega(4n);
+    }
+}
+
+.b-list__inner{
+    padding:10px;
+    max-width:280px;
+    margin:0 auto $project-line-height;
+    @extend .g-shadow-hover;
+    box-sizing:border-box;
+}
+
+.b-list__link{
+    display:block;
+    margin-bottom:20px;
+    text-decoration:none;
+    height:235px;
+    position:relative;
+
+    &:hover{
+        .b-list__img{
+            opacity:.7;
+        }
+    }
+}
+.b-list__img{
+    @extend .g-img-centered;
+    @include backface-visibility(hidden);
+    @include transition(opacity .3s ease);
+}
+
+.b-list__caption{
+    text-align:center;
+    font-family:$font-light;
+}
+.b-list__info{
+    overflow:hidden;
+}
+.b-list__title{
+    @extend .g-subtitle;
+    margin-bottom:10px;
+}

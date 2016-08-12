@@ -1,0 +1,110 @@
+﻿@import "base";
+/* Forms */
+
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+    @include appearance(none);
+}
+
+.g-input,
+.g-select,
+.g-textarea{
+    display:inline-block;
+    vertical-align:middle;
+    width:100%;
+    margin-bottom: 25px;
+    padding:6px 20px;
+    background-color: #fff;
+    border: 1px solid $border-color;
+    border-radius:$border-radius;
+    color:$text-color;
+    box-shadow: none;
+    box-sizing: border-box;
+
+    @include placeholder{
+        color:#888888;
+        text-overflow:ellipsis;
+    }
+
+    &:hover,
+    &:focus{
+        border-color:$primary-alt-2;
+        outline:0;
+    }
+
+    &:focus{
+        box-shadow:inset 0 0 4px rgba($primary-alt-2, .5);
+    }
+
+    &:disabled{
+        border-color:$border-color;
+        box-shadow:inset 0 0 4px rgba($border-color, .8);
+    }
+
+    &.error{
+        border-color:red;
+        box-shadow:inset 0 0 4px rgba(red, .5);
+
+        @include placeholder{
+            color:red;
+        }
+    }
+}
+
+.g-input,
+.g-select{
+    height:36px;
+}
+
+.g-textarea{
+    min-height:120px;
+}
+
+.g-label{
+    display: block;
+    margin-bottom:$project-line-height/3;
+
+    &.error{
+        color:red;
+    }
+}
+.g-label__body{
+    display: inline-block;
+    margin-left:10px;
+    font-weight: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }
+
+.g-input-field{//будем скриптом показывать 3вездочку для обязательных полей
+    position:relative;
+    padding-right:20px;
+
+    &:after{
+        content:'\e817';
+        display:none;
+        font-family:'fontello';
+        @include font-size(12px);
+        position:absolute;
+        top:-10px;
+        right:0;
+        color:#ed5c62;
+    }
+
+    &.required{//покажем скриптом
+        &:after{
+            display:block;
+        }
+    }
+}
+
+

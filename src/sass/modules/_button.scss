@@ -1,0 +1,75 @@
+﻿@import "base";
+/* Buttons */
+.g-btn{
+    display:inline-block;
+    vertical-align:middle;
+    height:40px;
+    line-height:40px;
+    padding:0 34px;
+    color:#fff;
+    text-align: center;
+    @include font-size(12px);
+    font-family:$font-bold;
+    font-weight:700;
+    text-decoration: none;
+    text-transform:uppercase;
+    white-space: nowrap;
+    background: $primary;
+    border-radius:$border-radius;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    outline:0;
+
+    &:hover,
+    &:focus,
+    &:active{
+        color:#fff;
+        background:darken($primary, 7%);
+        box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    &:active{
+        @include transform(translateY(3px));
+    }
+
+    &:disabled{
+        background:grey;
+        box-shadow:none;
+    }
+}
+
+.g-clearbutton{
+    display:inline-block;
+    vertical-align:middle;
+    border:none;
+    background:none;
+    padding:0;
+    cursor: pointer;
+    text-align:center;
+    text-decoration:none;
+    box-sizing: border-box;
+    white-space:nowrap;
+    outline:0;
+
+    &:active{
+        @include transform(translateY(3px));
+    }
+}
+
+
+.g-btn--alt{ //зеленая кнопка
+    background:$primary-alt;
+    &:hover,
+    &:focus,
+    &:active{
+        background:darken($primary-alt, 7%);
+    }
+}
+
+.g-btn--wide{ //широкая кнопка
+    width:250px;
+    overflow:hidden;
+}
+
+

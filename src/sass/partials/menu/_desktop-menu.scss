@@ -1,0 +1,138 @@
+﻿@import "../../modules/_base.scss";
+/* Desktop Menu */
+.h-menu{
+    list-style-type:none;
+    margin:0;
+    padding:0 0 0 38px;
+    font-size:0;
+}
+.h-menu__item{
+    display:inline-block;
+    vertical-align:middle;
+    margin-left:50px;
+    @include font-size(12px);
+
+    &:first-child{
+        margin-left:0;
+    }
+
+    @include media($large){
+        margin-left:64px;
+    }
+}
+
+.h-menu__link{
+    display:block;
+    height:64px;
+    line-height:64px;
+    white-space:nowrap;
+    color:$text-color;
+    text-decoration:none;
+    text-transform:uppercase;
+
+    &:hover,
+    &:active,
+    &.current{
+        color:$primary-alt;
+    }
+
+    &.current{
+        cursor:default;
+    }
+}
+
+//catalog menu
+.h-cat{
+    @extend .g-clearfix;
+    font-size:0;
+    text-align:center;
+    position:relative;
+}
+.h-cat__item{
+    display:inline-block;
+    vertical-align:middle;
+    @include font-size(14px);
+
+    &:first-child{
+        .h-cat__link:before{
+            display:none;
+        }
+    }
+}
+.h-cat__link{
+    display:block;
+    height:60px;
+    padding:0 50px;
+    line-height:60px;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-family:$font-bold;
+    font-weight:700;
+    color:#fff;
+    position:relative;
+    letter-spacing:rem(.2px);
+
+    &:hover,
+    &:active,
+    &.current,
+    &.hover{
+        //color:$primary-alt-1;
+        background:darken($primary, 5%);
+    }
+
+    &:before{
+        content:'';
+        display:block;
+        position:absolute;
+        width:0;
+        top:11px;
+        bottom:11px;
+        left:0;
+        border-left:1px solid #676198;
+    }
+}
+
+
+//catalog submenu
+.h-subcat{
+    display:none;
+    list-style-type:none;
+    margin:0;
+    padding:25px 30px 15px 30px;
+    background:#eae9f2;
+    position:absolute;
+    width:100%;
+    left:0;
+    top:60px;
+    text-align:left;
+    @extend .g-clearfix;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    z-index:500;
+    box-sizing:border-box;
+}
+
+.h-subcat__item{
+    float:left;
+    min-height:1px;
+    margin-bottom:10px;
+    @include font-size(15px);
+    @include span-columns(3);
+    @include omega(4n);
+}
+
+.h-subcat__link{
+    display:block;
+    text-decoration:none;
+    color:$text-color;
+    line-height:1.2;
+
+    &:hover,
+    &:active,
+    &.current{
+        color:$primary-alt;
+    }
+
+    &.current{
+        cursor:default;
+    }
+}

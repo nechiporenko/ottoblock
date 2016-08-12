@@ -1,0 +1,51 @@
+﻿@import "../../modules/_base.scss";
+/*Breadcrumbs*/
+.breadcrumbs{
+    padding:0;
+    margin:0 0 23px;
+    line-height:1.1;
+    list-style-type:none;
+    color:#8e8e8e;
+}
+.breadcrumbs__item{
+    display:inline-block;
+    position:relative;
+
+    &:after{
+        content:'/';
+        margin:0 5px;
+    }
+
+    &:last-child{
+        &:after{
+            display:none;
+        }
+    }
+}
+.breadcrumbs__link{
+    display:inline-block;
+    vertical-align:middle;
+    max-width:250px;
+    white-space:nowrap;
+    text-decoration:none;
+    text-overflow:ellipsis;
+    position:relative;
+    overflow:hidden;
+
+    &:before{
+        content:'';
+        display:block;
+        height:1px;
+        background:#d2d1e1;
+        position:absolute;
+        left:0; right:0; bottom:0;
+        @include transition(background .2s ease-in);
+    }
+
+    &:hover,
+    &:active{
+        &:before{
+            background:$primary;
+        }
+    }
+}

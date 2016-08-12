@@ -1,0 +1,60 @@
+﻿@import "../../modules/_base.scss";
+/*Page Hero (Page banner)*/
+.p-hero{
+    margin-bottom:35px;
+    background:#fff;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1), inset 0 0 1px 0 #ccc;
+    position:relative;
+    overflow:hidden;
+    z-index:1;
+}
+
+.p-hero__thumb{
+    position:absolute;
+    top:0; right:0;
+    width:100%;
+    height:100%;
+    display:none;
+    background-position:right top;
+    background-repeat:no-repeat;
+}
+
+.p-hero__entry{
+    padding:25px 10px;
+    box-sizing:border-box;
+}
+
+
+@include media($tablet){
+    .p-hero{
+        height:270px;
+    }
+    .p-hero__thumb{
+        display:block;
+    }
+    .p-hero__entry{
+        padding:25px;
+        position:absolute;
+        top:0; left:0;
+        width:100%; height:100%;
+        z-index:2;
+    }
+
+    .p-hero__content{
+        padding:10px;
+        width:70%;
+        font-size:rem(16px);
+        background:rgba(#fff, .9);
+    }
+}
+
+@include media($large){
+    .p-hero__entry{
+        padding:25px 70px;
+    }
+    .p-hero__content{
+        padding:0;
+        width:35%;
+        font-size:rem(18px);
+    }
+}

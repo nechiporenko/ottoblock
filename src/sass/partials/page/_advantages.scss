@@ -1,0 +1,43 @@
+﻿@import "../../modules/_base.scss";
+/*Advantages block*/
+$adv-color:#93aeb3;
+.b-advantage{
+    max-width:240px;
+    margin:0 auto $project-line-height;
+    text-align:center;
+
+    @include media($tablet){
+        margin-bottom:0;
+
+        p:last-of-type{
+            margin-bottom:0;
+        }
+    }
+}
+
+.b-advantage__icon{
+    @include size(100px);
+    margin:0 auto 30px;
+    border:1px solid $adv-color;
+    border-radius:50%;
+    box-sizing:border-box;
+    position:relative;
+}
+
+.b-advantage__img{
+    max-width:80px;
+    height:auto;
+    @extend .g-align;
+}
+
+.b-advantage__caption{
+    font-family:$font-light;
+}
+.b-advantage__title{
+    display:block;
+    @include font-size(16px);
+    margin-bottom:$project-line-height;
+    line-height:1;
+    font-family:$font-bold;
+    text-transform:uppercase;
+}

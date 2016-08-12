@@ -1,0 +1,40 @@
+﻿@import "../../modules/_base.scss";
+/*Single Review Block*/
+.b-review{
+    padding-top:2*$project-line-height;
+    border-top:1px solid $border-color;
+
+    &:first-of-type{
+        border-top:none;
+    }
+}
+
+.b-review__meta{
+    margin-bottom:5px;
+    line-height:1.1;
+}
+
+.b-review__name,
+.b-review__date{
+    display:block;
+}
+
+.b-review__name{
+    @include font-size(16px);
+    margin-right:5px;
+    color:$title-color;
+    font-family:$font-bold;
+}
+
+.b-review__date{
+    color:#c8c8c8;
+    font-family:$font-light;
+}
+
+@include media($small){
+    .b-review__name,
+    .b-review__date{
+        display:inline-block;
+        vertical-align:baseline;
+    }
+}

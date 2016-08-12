@@ -1,0 +1,64 @@
+﻿@import "../../modules/_base.scss";
+/*Tabs*/
+.b-tabs{
+    list-style-type:none;
+    padding:0;
+    margin:0 auto 2*$project-line-height;
+    font-size:0;
+    text-align:center;
+}
+.b-tabs__item{
+    display:block;
+    @include font-size(14px);
+}
+
+.b-tabs--2x{
+    max-width:520px;
+}
+
+.b-tabs--3x{
+    max-width:800px;
+}
+
+.b-tabs__link{
+    display:block;
+    padding:10px;
+    color:$text-color;
+    text-decoration:none;
+    text-transform:uppercase;
+    border-bottom:4px solid #dbeff7;
+
+    &:hover,
+    &:active{
+        color:$primary-alt-2;
+    }
+}
+
+.b-tabs__item.current{
+    .b-tabs__link{
+        border-bottom-color:$primary-alt-2;
+    }
+}
+
+.b-tabs__inner{
+    @extend .g-clearfix;
+}
+
+@include media($small){
+    .b-tabs__item{
+        display:inline-block;
+    }
+
+    .b-tabs--2x{
+        .b-tabs__item{
+            width:50%;
+        }
+    }
+
+    .b-tabs--3x{
+        .b-tabs__item{
+            width:(100%)/3;
+        }
+    }   
+}
+

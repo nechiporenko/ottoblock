@@ -1,0 +1,130 @@
+﻿@font-face {
+	font-family:'ProximaNova-Regular';
+	src: url('../fonts/ProximaNova-Regular_gdi.eot');
+	src: url('../fonts/ProximaNova-Regular_gdi.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-Regular_gdi.woff') format('woff'),
+		url('../fonts/ProximaNova-Regular_gdi.ttf') format('truetype'),
+		url('../fonts/ProximaNova-Regular_gdi.svg#ProximaNova-Regular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-2666;
+}
+
+@font-face {
+	font-family:'ProximaNova-RegularIt';
+	src: url('../fonts/ProximaNova-RegularIt_gdi.eot');
+	src: url('../fonts/ProximaNova-RegularIt_gdi.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-RegularIt_gdi.woff') format('woff'),
+		url('../fonts/ProximaNova-RegularIt_gdi.ttf') format('truetype'),
+		url('../fonts/ProximaNova-RegularIt_gdi.svg#ProximaNova-RegularIt') format('svg');
+	font-weight: 400;
+	font-style: italic;
+	font-stretch: normal;
+	unicode-range: U+0020-2666;
+}
+
+@font-face {
+	font-family:'ProximaNova-Bold';
+	src: url('../fonts/ProximaNova-Bold_gdi.eot');
+	src: url('../fonts/ProximaNova-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-Bold_gdi.woff') format('woff'),
+		url('../fonts/ProximaNova-Bold_gdi.ttf') format('truetype'),
+		url('../fonts/ProximaNova-Bold_gdi.svg#ProximaNova-Bold') format('svg');
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-2666;
+}
+
+@font-face {
+	font-family:'ProximaNova-BoldIt';
+	src: url('../fonts/ProximaNova-BoldIt_gdi.eot');
+	src: url('../fonts/ProximaNova-BoldIt_gdi.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-BoldIt_gdi.woff') format('woff'),
+		url('../fonts/ProximaNova-BoldIt_gdi.ttf') format('truetype'),
+		url('../fonts/ProximaNova-BoldIt_gdi.svg#ProximaNova-BoldIt') format('svg');
+	font-weight: 700;
+	font-style: italic;
+	font-stretch: normal;
+	unicode-range: U+0020-2666;
+}
+
+@font-face {
+	font-family:'ProximaNova-Light';
+	src: url('../fonts/ProximaNova-Light_gdi.eot');
+	src: url('../fonts/ProximaNova-Light_gdi.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-Light_gdi.woff') format('woff'),
+		url('../fonts/ProximaNova-Light_gdi.ttf') format('truetype'),
+		url('../fonts/ProximaNova-Light_gdi.svg#ProximaNova-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-2666;
+}
+
+//icon font
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello.eot?70727472');
+  src: url('../fonts/fontello.eot?70727472#iefix') format('embedded-opentype'),
+       url('../fonts/fontello.woff2?70727472') format('woff2'),
+       url('../fonts/fontello.woff?70727472') format('woff'),
+       url('../fonts/fontello.ttf?70727472') format('truetype'),
+       url('../fonts/fontello.svg?70727472#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: none;
+  width: 1em;
+  margin-right: .2em;
+  margin-left: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ 
+.icon-search:before { content: '\e800'; } /* '' */
+.icon-mail:before { content: '\e801'; } /* '' */
+.icon-phone:before { content: '\e802'; } /* '' */
+.icon-copyright:before { content: '\e803'; } /* '' */
+.icon-down-open-big:before { content: '\e804'; } /* '' */
+.icon-left-open-big:before { content: '\e805'; } /* '' */
+.icon-right-open-big:before { content: '\e806'; } /* '' */
+.icon-up-open-big:before { content: '\e807'; } /* '' */
+.icon-down-dir:before { content: '\e808'; } /* '' */
+.icon-up-dir:before { content: '\e809'; } /* '' */
+.icon-ok:before { content: '\e80a'; } /* '' */
+.icon-cancel:before { content: '\e80b'; } /* '' */
+.icon-dot-circled:before { content: '\e80c'; } /* '' */
+.icon-circle-empty:before { content: '\e80d'; } /* '' */
+.icon-print:before { content: '\e80e'; } /* '' */
+.icon-file-pdf:before { content: '\e80f'; } /* '' */
+.icon-download:before { content: '\e810'; } /* '' */
+.icon-doc-text:before { content: '\e811'; } /* '' */
+.icon-file-word:before { content: '\e812'; } /* '' */
+.icon-file-excel:before { content: '\e813'; } /* '' */
+.icon-file-archive:before { content: '\e814'; } /* '' */
+.icon-zoom-in:before { content: '\e815'; } /* '' */
+.icon-circle:before { content: '\e816'; } /* '' */
+.icon-asterisk:before { content: '\e817'; } /* '' */
+.icon-play:before { content: '\e818'; } /* '' */
+.icon-docs:before { content: '\e819'; } /* '' */
+.icon-doc:before { content: '\e81a'; } /* '' */
+.icon-spin1:before { content: '\e81b'; } /* '' */
+.icon-menu:before { content: '\e81c'; } /* '' */
+.icon-play-circled:before { content: '\e81d'; } /* '' */
+.icon-star:before { content: '\e81e'; } /* '' */
+.icon-star-empty:before { content: '\e81f'; } /* '' */
+.icon-star-half:before { content: '\e820'; } /* '' */
+.icon-star-half-alt:before { content: '\e821'; } /* '' */

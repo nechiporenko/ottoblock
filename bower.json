@@ -1,0 +1,22 @@
+{
+  "name": "frontend-boilerplate",
+  "description": "Grunt Frontend Boilerplate",
+  "main": "",
+  "authors": [
+    "Serhiy Nechiporenko"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bourbon": "^4.2.7",
+    "neat": "^1.8.0",
+    "jQuery": "1.12.0"
+  }
+}

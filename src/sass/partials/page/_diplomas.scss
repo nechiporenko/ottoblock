@@ -1,0 +1,46 @@
+﻿@import "../../modules/_base.scss";
+/*Diploma's Slider*/
+.b-diploma{
+    margin:-10px -10px 0;
+
+    .bx-wrapper {
+        @include media($large){
+             .bx-prev {
+		        left: -40px;
+	        }
+	        .bx-next {
+		        right: -40px;
+	        }
+        }
+    }
+}
+.b-diploma__list{
+    list-style-type:none;
+    padding:0 !important;
+    margin:0;
+    @extend .g-clearfix;
+}
+.b-diploma__item{
+    float:left;
+    margin-right:22px;
+    width:246px;
+    padding:10px 10px 15px;//box-shadow
+    box-sizing:border-box;
+    min-height:1px;
+}
+.b-diploma__link{
+    display:block;
+    max-width:226px;
+    width:226px;
+    position:relative;
+
+    &:after{
+        content:'';
+        display:block;
+        padding-top:(306*100%)/206;
+    }
+}
+.b-diploma__img{
+    @extend .g-img-centered;
+    @extend .g-shadow-hover;
+}

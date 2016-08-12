@@ -1,0 +1,83 @@
+﻿@import "../../modules/_base.scss";
+/*Staff - slider list*/
+.b-staff{
+    .bx-wrapper .bx-pager{
+        bottom: -$project-line-height;
+    }
+
+    @include media($mobile){
+        .bx-wrapper{
+            .bx-prev {
+		        left: -20px;
+	        }
+	        .bx-next {
+		        right: -20px;
+	        }
+        }
+    }
+
+    @include media($large){
+        .bx-wrapper{
+            .bx-prev {
+		        left: -45px;
+	        }
+	        .bx-next {
+		        right: -45px;
+	        }
+        }
+    }
+}
+.b-staff__slider{
+    @extend .g-clearlist;
+    @extend .g-clearfix;
+}
+.b-staff__item{
+    @extend .g-column;
+    max-width:300px;
+    padding:10px 10px 20px;//shadow!
+}
+.b-staff__inner{
+    @extend .b-list__inner;
+}
+.b-staff__link{
+    display:block;
+    margin-bottom:10px;
+    height:200px;
+    position:relative;
+    text-decoration:none;
+
+    &:hover{
+        .b-staff__img{
+            opacity:.7;
+        }
+    }
+}
+.b-staff__img{
+    @extend .b-list__img;
+}
+.b-staff__caption{
+    text-align:center;
+    line-height:1;
+    font-family:$font-light;
+}
+.b-staff__name{
+    display:block;
+    margin-bottom:5px;
+    @include font-size(16px);
+    font-family:$font-bold;
+    text-transform:uppercase;
+}
+.b-staff__position{
+    display:block;
+    margin-bottom:$project-line-height;
+    text-transform:uppercase;
+}
+.b-staff__description{
+    color:#8e8e8e;
+    line-height:1.5;
+}
+
+.b-staff__title,
+.b-staff__description{
+    overflow:hidden; //будем js выравнивать по высоте
+}

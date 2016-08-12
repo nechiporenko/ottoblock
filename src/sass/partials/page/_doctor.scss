@@ -1,0 +1,43 @@
+﻿@import "../../modules/_base.scss";
+/*About the Doctor section*/
+.b-doctor{
+    @extend .g-clearfix;
+}
+.b-doctor__photo,
+.b-doctor__info{
+    @extend .g-column;
+}
+
+.b-doctor__photo{
+    max-width:300px;
+}
+
+@include media($desktop){
+    .b-doctor__photo{
+        width:26.54867%;
+        margin:0 2.83% 0 0;
+    }
+    .b-doctor__info{
+        width:70.62133%;
+    }
+}
+
+.b-doctor__thumb{
+    margin-bottom:15px;
+    position:relative;
+    background:#f9f9f9;
+
+    &:after{
+        content:'';
+        display:block;
+        padding-top:100%;
+    }
+}
+.b-doctor__img{
+    @extend .g-img-centered;
+}
+
+.b-doctor__reviewlink{
+    display:block;
+    @include font-size(16px);
+}

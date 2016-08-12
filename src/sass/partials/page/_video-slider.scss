@@ -1,0 +1,133 @@
+﻿@import "../../modules/_base.scss";
+/*Video slider*/
+.b-video{
+    min-height:380px;//зададим мин.высоту, чтобы при переключении вкладок не "прыгала" страница
+
+    .bx-wrapper .bx-pager{
+        bottom: 0;
+    }
+
+    .bx-wrapper .bx-controls-direction a{
+        margin-top:0;
+        top:92px;
+    }
+
+    @include media($mobile){
+        .bx-wrapper{
+            .bx-prev {
+		        left: -20px;
+	        }
+	        .bx-next {
+		        right: -20px;
+	        }
+        }
+    }
+
+    @include media($large){
+        .bx-wrapper{
+            .bx-prev {
+		        left: -140px;
+	        }
+	        .bx-next {
+		        right: -140px;
+	        }
+        }
+    }
+}
+.b-video__slider{
+    @extend .g-clearlist;
+    @extend .g-clearfix;
+}
+
+.b-video__item{
+    @extend .g-column;
+    max-width:300px;
+    padding:10px 10px 20px;//shadow!
+}
+
+.b-video__inner{
+    @extend .b-list__inner;
+    max-width:300px;
+}
+
+
+.b-video__thumb{
+    position:absolute;
+    top:0; left:0; right:0; bottom:0;
+
+    &:before{//заливка цветом
+        content:'';
+        display:block;
+        position:absolute;
+        width:100%;
+        height:100%;
+        background:rgba($primary, .2);
+        z-index:2;
+    }
+
+    &:after{ //значек play - иконка
+        content:'\e818';
+        font-family:'fontello';
+        color:#adacd5;
+        @include font-size(24px);
+        @extend .g-align;
+        z-index:5;
+        @include transition(color .3s ease);
+    }
+}
+
+.b-video__link{
+    display:block;
+    max-width:260px;
+    margin:0 auto 10px;
+    text-decoration:none;
+    position:relative;
+
+    &:before{//кружок вокруг иконки play
+        content:'';
+        display:block;
+        @include size(70px);
+        border-radius:50%;
+        @extend .g-align;
+        z-index:3;
+        background:rgba($primary, .8);
+        @include transition(background .3s ease);
+    }
+
+    &:after{//распорка
+        content:'';
+        display:block;
+        padding-top:(180/260)*100%; //260x180
+    }
+
+    &:hover{
+        &:before{
+            background:$primary;
+        }
+        .b-video__thumb{
+            &:after{
+                color:#fff;
+            }
+        }
+    }
+}
+
+.b-video__img{
+    @extend .b-list__img;
+    z-index:1;
+}
+
+.b-video__caption{
+    text-align:center;
+    font-family:$font-light;
+    color:#a1a1a1;
+}
+
+.b-video__title{
+    display:block;
+    margin-bottom:5px;
+    font-family:$font-bold;
+    @include font-size(18px);
+    color:$title-color;
+    line-height:1;
+}

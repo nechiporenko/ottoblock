@@ -1,0 +1,84 @@
+﻿@import "../../modules/_base.scss";
+/*Mobile Menu*/
+.page__panel{
+    position:fixed;
+    @include px2rem(width, 256px);
+    height:100%;
+    top:0;
+    @include px2rem(left, -256px);
+    z-index:3300;
+    overflow-x:hidden;
+    overflow-y:auto;
+    will-change:left;
+    @include transition(left .3s ease);
+    @include linear-gradient(to bottom, #2d2d2d, #161616);
+
+    @include media($desktop){
+        display:none;
+    }
+
+    &.active{
+        left:0;
+    }
+}
+
+
+.m-menu{
+    @extend .g-clearlist;
+}
+
+.m-menu__item{
+    font-size:rem(16px);
+    position:relative;
+
+    &.current{
+        & > .m-menu__link{
+            color:$primary-alt-2;
+        }
+    }
+}
+
+
+.m-menu__link{
+    display:block;
+    padding:13px 12px;
+    border-top:1px solid #808080;
+    border-bottom:1px solid #000;
+    color:#fff;
+    line-height:1.2;
+    text-decoration:none;
+
+    &:hover,
+    &:active{
+        color:$primary-alt-2;
+    }
+}
+
+
+.m-menu__label{
+    display:block;
+    @include px2rem(height, 44px);
+    @include px2rem(line-height, 44px);
+    @include px2rem(padding, 0 30px 0 12px);
+    border-bottom:1px solid #000;
+    font-size:rem(18px);
+    font-weight:600;
+    color:$border-color;
+    text-transform:uppercase;
+    box-sizing:border-box;
+    cursor:pointer;
+    outline:0;
+
+    &:after{
+        content:'\e80b';
+        font-family:'fontello';
+        position:absolute;
+        right:12px;
+    }
+}
+
+.m-menu__divider{
+    display:block;
+    border-top:1px solid #808080;
+    border-bottom:1px solid #000;
+}

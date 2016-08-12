@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="ru"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru"> <!--<![endif]-->
+<head>
+    <title>Ottoblock Doctor's Page</title>
+    @@include('templates/head.html')
+</head>
+<body class="page">
+    <!--header-->
+    @@include('templates/header.html')
+
+    <!--main content-->
+    <main class="page__content">
+        <div class="g-container">
+            <header class="page__header">
+                <!--breadcrumbs-->
+                <ol class="breadcrumbs">
+                    <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                        <a href="index.html" class="breadcrumbs__link" itemprop="url">
+                            <span itemprop="title">Главная</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                        <a href="specialists.html" class="breadcrumbs__link" itemprop="url">
+                            <span itemprop="title">Специалисты</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        Егорченков Евгений Евгениевич
+                    </li>
+                </ol>
+                <!--/breadcrumbs-->
+            </header>
+            
+            <!--doctor info-->
+            <div class="page__block">
+                <div class="b-doctor">
+                    <figure class="b-doctor__photo">
+                        <div class="b-doctor__thumb">
+                            <img src="img/loader.gif" class="b-doctor__img js-lazyimg" data-src="http://placehold.it/300x300" alt="" />
+                            <noscript>
+                                <img src="http://placehold.it/300x300" class="b-doctor__img" alt="" />
+                            </noscript>
+                        </div>
+                        <figcaption class="b-doctor__rating">
+                            <div class="b-rating js-rating" data-readonly="1" data-rating="5.0">
+                                <span class="b-rating__value"></span>
+                                <select class="b-rating__select">
+                                    <option value="" label="empty"></option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                            <a href="#review" class="b-doctor__reviewlink">278 отзывов</a>
+                        </figcaption>
+                    </figure>
+
+                    <article class="b-doctor__info">
+                        <header class="p-header">
+                            <h1 class="p-title">Егорченков Евгений Евгениевич</h1>
+                            <p class="p-header__subtitle">Руководитель лаборатории протезирования</p>
+                        </header>
+                        <p>Специалист в области протезирования верхних и нижних конечностей с 26-летним стажем. Сертифицирован ф.Otto Bock HealthCare GmbH. Aenean ut fringilla turpis. Nam tincidunt eget ex maximus imperdiet. Mauris lobortis, tellus non iaculis finibus, erat ligula accumsan mauris, non varius libero dui et odio.Vestibulum gravida viverra ex in laoreet. Ut et dui sodales, pulvinar tellus nec, bibendum est. Nunc malesuada sed mi sed pretium.</p>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                    </article>
+                </div>
+            </div><!--/.page__block-->
+            <!--/doctor info-->
+
+            <!--doctor details-->
+            <article>
+                <h2 class="g-subtitle g-text-center">О специалисте</h2>
+                <div class="page__block">
+                    <p>Phasellus ullamcorper enim augue, a accumsan velit gravida a. Nunc diam nisl, ultrices a hendrerit ut, pretium quis tortor. Suspendisse efficitur, ante ac consectetur mollis, ligula velit fermentum tortor, in placerat turpis ante et massa. In nec metus et dui vulputate condimentum sit amet volutpat purus. Pellentesque aliquam augue at maximus luctus. Sed finibus sem vitae purus convallis, eget dictum nulla accumsan.</p>
+                    <p>Опыт работы:</p>
+                    <ul>
+                        <li>1990 – 1995 гг. - In nec metus et dui vulputate condimentum sit amet volutpat purus. Pellentesque aliquam augue at maximus;</li>
+                        <li>2005 – 2010 гг. - Nunc diam nisl, ultrices a hendrerit ut, pretium quis tortor. Suspendisse efficitur, ante ac consectetur mollis, ligula velit fermentum tortor, in placerat turpis ante et massa;</li>
+                        <li>2010 – настоящее время - Suspendisse efficitur, ante ac consectetur mollis, ligula velit fermentum tortor, in placerat turpis ante et massa. In nec metus et dui vulputate condimentum sit amet volutpat purus</li>
+                    </ul>
+                    <hr />
+                    <h3>Образование</h3>
+                    <ul>
+                        <li>In nec metus et dui vulputate condimentum sit amet volutpat purus. Pellentesque aliquam augue at maximus (1895 г.);</li>
+                        <li>Nunc diam nisl, ultrices a hendrerit ut, pretium quis tortor. Suspendisse efficitur, ante ac consectetur mollis, ligula velit fermentum tortor, in placerat turpis ante et massa (1898 г.);</li>
+                        <li>Suspendisse efficitur, ante ac consectetur mollis, ligula velit fermentum tortor, in placerat turpis ante et massa. In nec metus et dui vulputate condimentum sit amet volutpat purus (1898 г.).</li>
+                    </ul>
+                    <hr />
+                    <h3>Курсы</h3>
+                    <ul>
+                        <li>In nec metus et dui vulputate condimentum sit amet volutpat purus. Pellentesque aliquam augue at maximus (1895 г.);</li>
+                        <li>Nunc diam nisl, ultrices a hendrerit ut, pretium quis tortor. Suspendisse efficitur, ante ac consectetur mollis, ligula velit fermentum tortor, in placerat turpis ante et massa (1898 г.);</li>
+                        <li>Suspendisse efficitur, ante ac consectetur mollis, ligula velit fermentum tortor, in placerat turpis ante et massa. In nec metus et dui vulputate condimentum sit amet volutpat purus (1898 г.).</li>
+                    </ul>
+                    <hr />
+                    <h3>Участие в ассоциациях</h3>
+                    <ul>
+                        <li>In nec metus et dui vulputate condimentum sit amet volutpat purus. Pellentesque aliquam augue at maximus (1895 г.);</li>
+                        <li>Nunc diam nisl, ultrices a hendrerit ut, pretium quis tortor. Suspendisse efficitur, ante ac consectetur mollis, ligula velit fermentum tortor, in placerat turpis ante et massa (1898 г.);</li>
+                        <li>Suspendisse efficitur, ante ac consectetur mollis, ligula velit fermentum tortor, in placerat turpis ante et massa. In nec metus et dui vulputate condimentum sit amet volutpat purus (1898 г.).</li>
+                    </ul>
+                    <hr />
+                    <h3>Сертификаты</h3>
+                    <!--diplomas slider-->
+                    <div class="b-diploma">
+                        <ul class="b-diploma__list js-diploma-slider">
+                            <li class="b-diploma__item">
+                                <a href="img/del/diploma01-xl.png" class="b-diploma__link">
+                                    <img src="img/loader.gif" class="b-diploma__img" data-src="img/del/diploma01.jpg" alt="" />
+                                    <noscript>
+                                        <img src="img/del/diploma01.jpg" class="b-diploma__img" alt="" />
+                                    </noscript>
+                                </a>
+                            </li>
+                            <li class="b-diploma__item">
+                                <a href="img/del/diploma02-xl.png" class="b-diploma__link">
+                                    <img src="img/loader.gif" class="b-diploma__img" data-src="img/del/diploma02.jpg" alt="" />
+                                    <noscript>
+                                        <img src="img/del/diploma02.jpg" class="b-diploma__img" alt="" />
+                                    </noscript>
+                                </a>
+                            </li>
+                            <li class="b-diploma__item">
+                                <a href="img/del/diploma03-xl.png" class="b-diploma__link">
+                                    <img src="img/loader.gif" class="b-diploma__img" data-src="img/del/diploma03.jpg" alt="" />
+                                    <noscript>
+                                        <img src="img/del/diploma03.jpg" class="b-diploma__img" alt="" />
+                                    </noscript>
+                                </a>
+                            </li>
+                            <li class="b-diploma__item">
+                                <a href="img/del/diploma04-xl.png" class="b-diploma__link">
+                                    <img src="img/loader.gif" class="b-diploma__img" data-src="img/del/diploma04.jpg" alt="" />
+                                    <noscript>
+                                        <img src="img/del/diploma04.jpg" class="b-diploma__img" alt="" />
+                                    </noscript>
+                                </a>
+                            </li>
+                            <li class="b-diploma__item">
+                                <a href="img/del/diploma05-xl.png" class="b-diploma__link">
+                                    <img src="img/loader.gif" class="b-diploma__img" data-src="img/del/diploma05.png" alt="" />
+                                    <noscript>
+                                        <img src="img/del/diploma05.png" class="b-diploma__img" alt="" />
+                                    </noscript>
+                                </a>
+                            </li>
+                            <li class="b-diploma__item">
+                                <a href="img/del/diploma06-xl.png" class="b-diploma__link">
+                                    <img src="img/loader.gif" class="b-diploma__img" data-src="img/del/diploma06.png" alt="" />
+                                    <noscript>
+                                        <img src="img/del/diploma06.png" class="b-diploma__img" alt="" />
+                                    </noscript>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/diplomas slider-->
+                </div><!--/.page__block-->
+            </article>
+            <!--/doctor details-->
+
+            <!--reviews section-->
+            <section id="review">
+                <h4 class="g-subtitle g-text-center">Отзывы клиентов</h4>
+                <div class="page__block">
+                    <h5>Оставить отзыв</h5>
+                    <p>Phasellus ullamcorper enim augue, a accumsan velit gravida a. Nunc diam nisl, ultrices a hendrerit ut, pretium quis tortor. Suspendisse efficitur, ante ac consectetur mollis, ligula velit fermentum tortor, in placerat turpis ante et massa</p>
+
+                    <!--review form-->
+                    <form class="b-review-form">
+                        <div class="b-review-form__main">
+                            <div class="g-input-field">
+                                <textarea class="g-textarea" placeholder="Ваш отзыв о специалисте"></textarea>
+                            </div>
+                            <div class="g-row">
+                                <div class="g-col g-col--one-half">
+                                    <div class="g-input-field">
+                                        <input type="text" class="g-input" placeholder="Ваше имя" required />
+                                    </div>
+                                </div>
+                                <div class="g-col g-col--one-half">
+                                    <div class="g-input-field">
+                                        <input type="email" class="g-input" placeholder="Email" required />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="b-review-form__rating">
+                            <span class="b-review-form__title">Оцените специалиста</span>
+                            <div class="b-rating js-rating" data-readonly="0" data-rating="0.0">
+                                <select class="b-rating__select">
+                                    <option value="" label="empty"></option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="g-btn">Отправить</button>
+                        </div>
+                    </form>
+                    <!--/review form-->
+
+                    <hr />
+                    <h5>Все отзывы</h5>
+                    <!--review-->
+                    <div class="b-review">
+                        <div class="b-review__meta">
+                            <span class="b-review__name">Николай</span>
+                            <time datetime="2016-04-28T23:16:54" class="b-review__date">28.04.2016</time>
+                        </div>
+                        <div class="b-rating js-rating" data-readonly="1" data-rating="5.0">
+                            <span class="b-rating__value"></span>
+                            <select class="b-rating__select">
+                                <option value="" label="empty"></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <p>Nullam nulla tortor, venenatis eu aliquet eget, rhoncus non nulla. Morbi maximus tincidunt tortor, ac blandit ex pellentesque pulvinar. Ut quis turpis quis elit vehicula lobortis vitae eget dolor. Aliquam sodales leo erat, nec ultrices nisi aliquam vitae. Aliquam tristique eros nec ex tincidunt, et pulvinar est ultrices. Aenean sit amet aliquam nulla. Donec ultrices, risus ut posuere mattis, erat mauris vehicula massa, ac porttitor nibh nunc sed nisi. Nullam vitae sodales nunc. Suspendisse feugiat rutrum diam. Mauris interdum tempus mi eu maximus. Praesent in eleifend libero, sit amet egestas metus. Sed gravida et metus quis rutrum. Vivamus ac ultricies est.</p>
+                    </div>
+                    <!--/review-->
+
+                    <!--review-->
+                    <div class="b-review">
+                        <div class="b-review__meta">
+                            <span class="b-review__name">Дарья</span>
+                            <time datetime="2016-04-26T23:00:00" class="b-review__date">26.04.2016</time>
+                        </div>
+                        <div class="b-rating js-rating" data-readonly="1" data-rating="3.5">
+                            <span class="b-rating__value"></span>
+                            <select class="b-rating__select">
+                                <option value="" label="empty"></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <p>Nullam nulla tortor, venenatis eu aliquet eget, rhoncus non nulla. Morbi maximus tincidunt tortor, ac blandit ex pellentesque pulvinar. Ut quis turpis quis elit vehicula lobortis vitae eget dolor. Aliquam sodales leo erat, nec ultrices nisi aliquam vitae. Aliquam tristique eros nec ex tincidunt, et pulvinar est ultrices. Aenean sit amet aliquam nulla.</p>
+                    </div>
+                    <!--/review-->
+                </div><!--/.page__block-->
+            </section>
+            <!--/reviews section-->
+
+            <footer class="page__footer">
+                <button type="button" class="g-btn g-btn--alt g-btn--wide">Показать еще отзывы</button>
+            </footer>
+        </div><!--/.g-container-->
+
+        <!--modal windows-->
+        @@include('templates/modals.html')
+        <!--/modal windows-->
+    </main>
+    <!--/main content-->
+
+    <!--footer-->
+    @@include('templates/footer.html')
+</body>
+</html>

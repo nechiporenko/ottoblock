@@ -1,0 +1,126 @@
+﻿@import "../modules/_base.scss";
+/*Page main elements*/
+.page__section{//секции на главной
+    padding:25px 0;
+    background:#fff;
+
+    @include media($tablet){
+        padding:45px 0;
+    }
+
+    @include media(min-height 900px){
+        padding:75px 0;
+    }
+}
+
+.page__section--alt{
+    background:#f9f9fc;
+}
+
+.page__header{//контейнер для хлебных крошек и заголовка страницы
+    padding-top:28px;
+    line-height:1;
+    overflow:hidden;
+
+    .g-title,
+    .g-subtitle{
+        margin-bottom:26px;
+    }
+}
+
+.page__block{//раздел страницы
+    padding:25px 10px;
+    margin-bottom:35px;
+    background:#fff;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    @extend .g-shadow-hover;
+    box-sizing:border-box;
+    @extend .g-clearfix;
+    color:#8e8e8e;
+
+    ul, ol{
+        padding-left:20px;
+    }
+
+    li{
+        margin-bottom:10px;
+    }
+
+
+    h1, h2, h3, h4, h5, h6{
+        @include font-size(18px);
+        color:#8e8e8e;
+    }
+
+    @include media($tablet){
+        padding:46px 25px;
+
+        hr{
+            margin-left:-15px;
+            margin-right:-15px;
+        }
+    }
+
+    @include media($large){
+        padding:46px 70px;
+
+        hr{
+            margin-left:-50px;
+            margin-right:-50px;
+        }
+    }
+}
+
+//подзаголовки
+.p-header{
+    margin-bottom:40px;
+}
+.p-title{
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height:1;
+    color:$title-color !important;
+    font-family:$font-title;
+    font-weight:700;
+    @include font-size(18px);
+    text-transform:uppercase;
+
+    a{
+        text-decoration:none;
+    }
+}
+
+.p-header__subtitle{
+    display:block;
+    margin:0;
+    line-height:1;
+    text-transform:uppercase;
+    color:#000;
+}
+
+.page__footer{//контейнер для пагинации (или кнопки дозагрузки контента)
+    padding:$project-line-height 0 3*$project-line-height;
+    text-align:center;
+}
+
+@import "page/_breadcrumbs.scss";//хлебные крошки
+@import "page/_page-hero-banner.scss";//баннер страницы (текст над статичной картинкой)
+@import "page/_hero-slider.scss";//слайдер на главной странице
+@import "page/_advantages.scss";//блок преимуществ (иконки)
+@import "page/_history-slider.scss";//слайдер история компании
+@import "page/_blocks-list.scss";//список блоков (элементы каталога)
+@import "page/_tabs.scss";//вкладки
+@import "page/_infograph.scss";//инфографика
+@import "page/_staff-slider.scss";//слайдер - специалисты компании
+@import "page/_video-slider.scss";//слайдер - видео
+
+@import "page/_doctor.scss";//блок О специалисте
+@import "page/_diplomas.scss";//Слайдер дипломов специалиста
+@import "page/_review-form.scss"; //Форма отзыва о специалисте
+@import "page/_review.scss"; //Блок отзыва о специалисте
+
+@import "page/_pagination.scss";
+@import "page/_scroll-up.scss";//кнопка скролла страницы
+
+
+

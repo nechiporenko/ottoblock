@@ -1,0 +1,126 @@
+﻿@import "../../modules/_base.scss";
+/*Jquery Bar Rating theme*/
+// Stars
+$star-default: #ffb500;
+$star-active: #ffb500;
+$star-selected: #ffb500;
+
+
+.b-rating{
+    position:relative;
+    padding:2px 0 0 45px;
+    line-height:1;
+    visibility:hidden;
+}
+.b-rating__value{//кастомное расположение текущего рейтинга
+    display:block;
+    width:45px;
+    white-space:nowrap;
+    overflow:hidden;
+    position:absolute;
+    top:0;
+    left:0;
+    @include font-size(24px);
+    color:$primary;
+    font-family:$font-bold;
+}
+
+.br-theme-fontawesome-stars-o {
+  .br-widget {
+    height: 30px;
+    white-space: nowrap;
+  
+    a {
+      font: normal normal normal 20px/1 fontello;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      text-decoration: none;
+      margin-right: 2px;
+    }
+
+    a:after {
+      content: '\e81f';
+      color: $star-default;
+    }
+
+    a.br-active:after {
+      content: '\e81e';
+      color: $star-active;
+    }
+
+    a.br-selected:after {
+      content: '\e81e';
+      color: $star-selected;
+    }
+
+    a.br-half:after {
+      content: '\e821';
+      color: $star-active;
+    }
+
+    .br-current-rating {
+      display: none;
+    }
+  }
+
+  .br-reverse {
+    a.br-half {
+      transform: scaleX(-1);
+      -moz-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+    }    
+  }
+
+}
+
+@media print {
+  .br-theme-fontawesome-stars-o {
+
+    .br-widget {
+      a:after {
+        content: '\e81f';
+        color: black;
+      }
+
+      a.br-active:after,
+      a.br-selected:after {
+        content: '\e81e';
+        color: black;
+      }
+
+      a.br-half:after {
+        content: '\e821';
+        color: black;
+      }
+    }
+
+  }
+}
+
+
+
+.b-rating.active{ //кликабельный рейтинг
+    padding:15px 0 0 0;
+
+    .b-rating__value{
+        display:none;
+    }
+
+    .br-theme-fontawesome-stars-o{
+        .br-widget{
+            height:34px;
+            margin-bottom:22px;
+        }
+        a {
+          margin-right: 15px;
+        }
+    }
+}
+
+
+
+
+
+
+

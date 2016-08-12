@@ -1,0 +1,76 @@
+﻿@import "../../modules/_base.scss";
+/*Search form*/
+.b-search{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:1200; //поверх хидера
+    background:#fff;
+    background:rgba(#fff, .85);
+}
+
+.b-search__wrapper{
+    display:table;
+    width:100%;
+    height:100%;
+    table-layout:fixed;
+}
+
+.b-search__inner{
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.b-search__container{
+    @extend .g-container;
+    max-width:750px;
+    padding:35px 0;
+    position:relative;
+}
+
+.b-search__title{
+    @extend .g-title;
+    color:$primary;
+}
+
+.b-search__close{
+    @extend .g-clearbutton;
+    position:absolute;
+    top:0; right:0;
+    color:$primary;
+    font-size:rem(36px);
+
+    [class^="icon-"]:before, [class*=" icon-"]:before{
+        margin:0;
+    }
+
+    @include media($desktop){
+        @include font-size(48px);
+    }
+}
+
+.b-search__input{
+    @extend .g-input;
+    height:40px;
+    margin-bottom:10px;
+    @include font-size(18px);
+    border-color:$primary;
+
+    &:hover,
+    &:focus{
+        border-color:$primary;
+    }
+
+    &:focus{
+        box-shadow:inset 0 0 4px rgba($primary, .5);
+    }
+   
+}
+
+.b-search__btn{
+    @extend .g-btn;
+    width:100%;
+}

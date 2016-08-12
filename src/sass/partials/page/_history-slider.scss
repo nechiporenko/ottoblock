@@ -1,0 +1,210 @@
+﻿@import "../../modules/_base.scss";
+/*History slider*/
+.b-history{
+    position:relative;
+
+    &:before,
+    &:after{//на широком экране правая часть блока будет с темной фоновой заливкой, левая - с серой
+        content:'';
+        display:none;
+        position:absolute;
+        top:0; bottom:0;
+        z-index:-1;
+    }
+
+    &:before{//левая заливка
+        left:0; right:50%;
+        background:#f2f3f5;
+    }
+
+    &:after{//правая заливка
+        left:50%; right:0;
+        background:#322c96;
+        background:rgba(#322c96, .95);
+    }
+
+    .bx-wrapper,
+    .bx-viewport{
+        height:100% !important;
+    }
+
+    .bx-wrapper{
+        .bx-controls-direction a{
+            @include size(48px);
+            line-height:48px;
+            margin-top:0;
+            color:#fff;
+            background:$primary;
+            background:rgba($primary, .95);
+            @include font-size(15px);
+
+            &:hover,
+            &:active{
+                color:$primary-alt-2;
+            }
+        }
+        .bx-next{
+            top:0;
+            text-align:center;
+        }
+        .bx-prev{
+            top:49px;
+            right:0;
+            left:auto;
+            text-align:center;
+        }
+    }
+}
+
+.b-history__wrap{
+    @extend .g-container;
+    max-width:1280px;
+
+    &:before,
+    &:after{//убираем clearfix - дальше будем имитировать таблицу
+        display:none;
+    }
+}
+
+.b-history__col{
+    position:relative;
+}
+
+.b-history__col--info{
+    background:#322c96;
+    background:rgba(#322c96, .95);
+    color:#fff;
+}
+
+.b-history__col--slider{
+    max-height:370px;
+    overflow:hidden;
+
+    &:after{//распорка
+        content:'';
+        display:block;
+        padding-top:(370/640)*100%; //640x370
+    }
+}
+
+.b-history__inner{//контейнер для слайдера
+    @extend .b-hero__wrapper;
+}
+
+.b-history__slider{
+    @extend .g-clearlist;
+    height:100%;
+}
+
+.b-history__item{
+    display:block;
+    height:100%;
+}
+
+.b-history__img{//контейнер для изображений
+    height:100%;
+    background-position:center center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+.b-history__pager{
+    font-family:$font-light;
+    font-size:rem(14px);
+    color:#fff;
+    position:absolute;
+    left:15px; top:10px;
+}
+
+
+//текст
+.b-history__caption{
+    max-width:470px;
+    margin:0 auto;
+    padding:30px 20px;
+    box-sizing:border-box;
+    text-align:center;
+    font-family:$font-light;
+}
+.b-history__title{
+    display:block;
+    margin-bottom:36px;
+    line-height:1.1;
+    font-size:rem(20px);
+    font-family:$font-bold;
+    text-align:center;
+    color:#fff;
+    position:relative;
+
+    &:after{
+        content:'';
+        display:block;
+        width:70px;
+        height:4px;
+        background:$primary-alt-2;
+        position:absolute;
+        bottom:-7px;
+        left:50%;
+        margin-left:-35px;
+    }
+}
+
+.b-history__link{
+    display:block;
+    color:#fff;
+    @include font-size(14px);
+    font-family:$font-bold;
+    text-transform:uppercase;
+    text-decoration:none;
+
+    &:hover,
+    &:active{
+        color:$primary-alt-2;
+    }
+}
+
+@include media($tablet){
+    .b-history{
+        &:before,
+        &:after{
+            display:block; //показали фон
+        }
+    }
+    .b-history__col--info{
+        background:none;//скрыли фон - дальще он не нужен
+    }
+    
+
+    .b-history__wrap{
+        display:table;
+        width:100%;
+        height:100%;
+        table-layout:fixed;
+    }
+
+    .b-history__col{
+        display:table-cell;
+        vertical-align:middle;
+        width:50%;
+    }
+}
+
+@include media($desktop){
+    .b-history{
+        height:370px; //ограничили высоту
+        overflow:hidden;
+    }
+
+    .b-history__title{
+        @include font-size(30px);
+    }
+
+    .b-history__caption{
+        @include font-size(16px);
+        line-height:1.5;
+    }
+
+    .b-history__pager{
+        @include font-size(30px);
+    }
+}

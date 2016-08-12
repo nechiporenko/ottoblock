@@ -1,0 +1,40 @@
+@import "../modules/base";
+/*Site Footer*/
+.b-footer{
+    background-color:#322c96;
+    background-color:rgba(#322c96, .89);
+    color:#fff;
+    position:relative;
+
+    &:before{
+        content:'';
+        display:none;
+        @extend .b-hero__wrapper;
+        z-index:-1;
+        background-image:url(../img/footer-bg.jpg);
+        background-position:center top;
+        background-repeat:repeat-x;
+    }
+
+
+    @include media($desktop){
+        &:before{
+            display:block;
+        }
+    }
+}
+
+.b-footer__sole{
+    padding:22px 0;
+    background:#2a284b;
+    text-align:center;
+}
+
+.b-footer__copyright{
+    @include font-size(11px);
+    text-transform:uppercase;
+    color:#a2a0c3;
+}
+
+
+@import "footer/_footer-form.scss";
