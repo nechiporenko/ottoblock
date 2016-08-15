@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="ru"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru"> <!--<![endif]-->
+<head>
+    <title>Ottoblock Product Page</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Page Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <script src="js/vendor/modernizr.min.js"></script>
+    <link rel="stylesheet" href="css/app.min.css">
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="page">
+    <!--header-->
+    <header class="b-header">
+        <div class="b-header__top">
+            <div class="g-container">
+                <a href="index.html" class="h-logo">
+                    <figure class="h-logo__inner">
+                        <img src="img/logo.png" class="h-logo__img" />
+                        <figcaption class="h-logo__caption">
+                            <span class="h-logo__title">Компания «АЕ. Брик»</span>
+                            Официальный представитель с 1997 года
+                        </figcaption>
+                    </figure>
+                </a>
+                <!--mobile header-top content-->
+                <ul class="h-top h-top--xs">
+                    <li class="h-top__item">
+                        <a href="tel:+380445696929" class="h-top__tel">
+                            <span class="g-light-text">(044) </span>569 69 29
+                        </a>
+                    </li>
+                    <li class="h-top__item">
+                        <button type="button" class="h-top__callback" data-modal="#callback">
+                            <i class="icon-phone">&nbsp;</i>
+                        </button>
+                    </li>
+                    <li class="h-top__item">
+                        <button type="button" class="h-top__search js-search-toggle">
+                            <i class="icon-search">&nbsp;</i>
+                        </button>
+                    </li>
+                    <li class="h-top__item">
+                        <button type="button" class="h-top__order" data-modal="#order">
+                            Отправить заявку
+                        </button>
+                    </li>
+                    <li class="h-top__item">
+                        <button type="button" class="h-top__menu js-mmenu-toggle">
+                            <i class="icon-menu">&nbsp;</i>
+                        </button>
+                    </li>
+                </ul>
+                <!--/mobile header-top content-->
+                <!--desktop top-header content-->
+                <ul class="h-top h-top--xl">
+                    <li class="h-top__item">
+                        <a href="contacts.html" class="h-top__addr"><span class="g-light-text">г.Киев</span>, ул.Раисы Окипной, 4</a>
+                    </li>
+                    <li class="h-top__item">
+                        <a href="tel:+380445696929" class="h-top__tel">
+                            <span class="g-light-text">(044) </span>569 69 29
+                        </a>
+                    </li>
+                    <li class="h-top__item">
+                        <button type="button" class="h-top__callback" data-modal="#callback">
+                            <span class="g-dot-border">Обратный звонок</span>
+                        </button>
+                    </li>
+                    <li class="h-top__item">
+                        <button type="button" class="h-top__search js-search-toggle"><i class="icon-search">&nbsp;</i></button>
+                        <button type="button" class="h-top__order" data-modal="#order">Отправить заявку</button>
+                    </li>
+                </ul>
+                <!--/desktop top-header content-->
+            </div>
+        </div><!--/.b-header__top-->
+        <div class="b-header__main">
+            <nav class="g-container">
+                <!--desktop main menu-->
+                <ul class="h-menu">
+                    <li class="h-menu__item">
+                        <a href="about.html" class="h-menu__link">О компании</a>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="contacts.html" class="h-menu__link">Контакты</a>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="sertificates.html" class="h-menu__link">Сертификаты</a>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="specialists.html" class="h-menu__link current">Специалисты</a>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="quetions.html" class="h-menu__link">Вопросы</a>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="reviews.html" class="h-menu__link">Отзывы</a>
+                    </li>
+                </ul>
+                <!--/desktop main menu-->
+            </nav>
+        </div><!--/.b-header__main-->
+        <div class="b-header__catalog js-sticky-header">
+            <nav class="g-container">
+                <!--desktop catalog menu-->
+                <ul class="h-cat js-menu">
+                    <li class="h-cat__item">
+                        <a href="catalog.html" class="h-cat__link">Протезирование</a>
+                        <ul class="h-subcat">
+                            <li class="h-subcat__item">
+                                <a href="catalog-inner.html" class="h-subcat__link">Комфорт и безопасность для активных пользователей протезов</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="catalog-inner.html" class="h-subcat__link">Линия C-Leg ®</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="catalog-inner.html" class="h-subcat__link">Протезирование нижних конечностей</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="catalog-inner.html" class="h-subcat__link">Протезирование верхних конечностей</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="catalog-inner.html" class="h-subcat__link">Детское протезирование верхних и нижних конечностей</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="catalog-inner.html" class="h-subcat__link">Спортивные протезы</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="catalog-inner.html" class="h-subcat__link">Водостойкий протез Aqualine</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="catalog-inner.html" class="h-subcat__link">Средства по уходу за кожей Derma</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="catalog-inner.html" class="h-subcat__link">Чехлы на культю ОТТО БОКК Чехлы на культю*</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="catalog-inner.html" class="h-subcat__link">Защита и уход – чехлы на культю Derma Seal*</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="catalog-inner.html" class="h-subcat__link">Easy-Proth® вспомогательный мешок для одевания протеза</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="catalog-inner.html" class="h-subcat__link">Компрессионные чехлы на культю</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="catalog-inner.html" class="h-subcat__link">Протез голени</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="catalog-inner.html" class="h-subcat__link">Косметические протезы пальцев</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="catalog-inner.html" class="h-subcat__link">Протезирование в Германии</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="h-cat__item">
+                        <a href="#" class="h-cat__link">Ортопедия</a>
+                        <ul class="h-subcat">
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Ортопедические стельки</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Полустельки, силиконовая продукция</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Инвалидные коляски для взрослых</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Инвалидные коляски для детей</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Насадки на унитаз</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="h-cat__item">
+                        <a href="#" class="h-cat__link">Реабилитация</a>
+                        <ul class="h-subcat">
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Поддерживающие бандажи на бедро</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">НАКОЛЕННИК для протеза голени</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">ЛАЙНЕРЫ С ТЕХНОЛОГИЕЙ SKINGUARD</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Средства по уходу за кожей Derma</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Easy-Proth® вспомогательный мешок для одевания протеза</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Защита и уход – чехлы на культю Derma Seal*</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Чехлы на культю ОТТО БОКК Чехлы на культю*</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Компрессионные чехлы на культю</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="h-cat__item">
+                        <a href="#" class="h-cat__link">Специалистам</a>
+                        <ul class="h-subcat">
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">КАТАЛОГИ</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Оборудование для протезно-ортопедических мастерских</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Комплектующие для протезов верхних конечностей</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Комплектующие для протезов нижних конечностей</a>
+                            </li>
+                            <li class="h-subcat__item">
+                                <a href="#" class="h-subcat__link">Материалы для протезно-ортопедических изделий</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--/desktop catalog menu-->
+            </nav>
+        </div><!--/.b-header__catalog-->
+        <!--search form-->
+        <div class="b-search js-search">
+            <div class="b-search__wrapper">
+                <div class="b-search__inner">
+                    <div class="b-search__container">
+                        <span class="b-search__title">Введите слово и нажмите Enter</span>
+                        <form>
+                            <div class="g-row">
+                                <div class="g-col g-col--two-thirds">
+                                    <input type="text" class="b-search__input" placeholder="Что будем искать?" />
+                                </div>
+                                <div class="g-col g-col--one-third">
+                                    <button type="submit" class="b-search__btn">
+                                        Найти
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <button type="button" class="b-search__close">
+                            <i class="icon-cancel">&nbsp;</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/search form-->
+    </header>
+    <!--/header-->
+
+
+    <!--main content-->
+    <main class="page__content">
+        <div class="g-container">
+            <header class="page__header">
+                <!--breadcrumbs-->
+                <ol class="breadcrumbs">
+                    <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                        <a href="index.html" class="breadcrumbs__link" itemprop="url">
+                            <span itemprop="title">Главная</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                        <a href="catalog.html" class="breadcrumbs__link" itemprop="url">
+                            <span itemprop="title">Протезирование</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                        <a href="catalog-inner.html" class="breadcrumbs__link" itemprop="url">
+                            <span itemprop="title">C-Leg</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        C-Leg 4 
+                    </li>
+                </ol>
+                <!--/breadcrumbs-->
+            </header>
+            
+            <!--product-->
+            <section class="b-product" itemscope itemtype="http://schema.org/Product">
+                <!--product gallery-->
+                <div class="b-gallery">
+                    <figure class="b-gallery__thumb">
+                        <div class="b-gallery__inner js-gallery-target">
+                            <img src="http://placehold.it/86x260" class="b-gallery__img" alt="" itemprop="image" />
+                        </div>
+                        <span class="b-gallery__icon">
+                            <i class="icon-zoom-in"></i>
+                        </span>
+                    </figure>
+
+                    <ul class="b-gallery__list js-gallery">
+                        <li class="b-gallery__item">
+                            <figure class="b-gallery__elem" data-img="http://placehold.it/86x260">
+                                <img src="http://placehold.it/36x90" class="b-gallery__img" alt="" />
+                            </figure>
+                        </li>
+                        <li class="b-gallery__item">
+                            <figure class="b-gallery__elem" data-img="http://placehold.it/260x260/ff55bb">
+                                <img src="http://placehold.it/90x90/ff55bb" class="b-gallery__img" alt="" />
+                            </figure>
+                        </li>
+                        <li class="b-gallery__item">
+                            <figure class="b-gallery__elem" data-img="http://placehold.it/100x260/bbff55">
+                                <img src="http://placehold.it/50x90/bbff55" class="b-gallery__img" alt="" />
+                            </figure>
+                        </li>
+                        <li class="b-gallery__item">
+                            <figure class="b-gallery__elem" data-img="http://placehold.it/86x260/55bbff">
+                                <img src="http://placehold.it/36x90/55bbff" class="b-gallery__img" alt="" />
+                            </figure>
+                        </li>
+                        <li class="b-gallery__item">
+                            <figure class="b-gallery__elem" data-img="http://placehold.it/86x260/ccdd44">
+                                <img src="http://placehold.it/36x90/ccdd44" class="b-gallery__img" alt="" />
+                            </figure>
+                        </li>
+                    </ul>
+
+                    <ul class="g-hidden js-gallery-large">
+                        <li>
+                            <a href="img/del/diploma01-xl.png" data-caption="Product 01">1</a>
+                        </li>
+                        <li>
+                            <a href="img/del/diploma02-xl.png" data-caption="Product 02">2</a>
+                        </li>
+                        <li>
+                            <a href="img/del/diploma03-xl.png" data-caption="Product 03">3</a>
+                        </li>
+                        <li>
+                            <a href="img/del/diploma04-xl.png" data-caption="Product 04">4</a>
+                        </li>
+                        <li>
+                            <a href="img/del/diploma05-xl.png" data-caption="Product 05">5</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/product gallery-->
+
+                <h1 class="g-subtitle" itemprop="name">C-Leg 4</h1>
+                <div itemprop="description">
+                    <p>Он обладает всеми ранее зарекомендовавшими себя свойствами системы протезирования C-Leg. Таких дополнительных инновационных решений не было ни в одном из предшествующих модулей C-Leg. Новый C-Leg надежнее и динамичнее. Кроме того, он современнее и проще.</p>
+                </div>
+                <div class="b-product__order">
+                    <button type="button" class="b-product__btn" data-modal="#order">Отправить заявку</button>
+                </div>
+
+                <p><b>Легкий переход в фазу переноса. Еще большая свобода передвижения</b>. Для поддержки перехода фазы опоры в фазу переноса в C-Leg 4 применяется новый метод, который обеспечивает для пользователя ряд преимуществ. Выполнение определяющего перехода из фазы опоры в фазу переноса становится намного проще. Пользователь больше не должен следить за созданием минимальной нагрузки на передний отдел стопы. Выполнение первых шагов с C-Leg 4, поэтому успешная адаптация к новому протезу протекает быстрее.</p>
+                <p><b>Управление фазой переноса в режиме реального времени. Еще больше динамики для пользователя</b>. Создаваемое в C-Leg 4 сопротивление в фазе переноса само адаптируется к любым ситуациям, в которых находится пользователь: на ровном участке, на лестницах, участках с наклоном или других поверхностях.</p>
+                <p><b>Стояние и фаза опоры. Функциональные возможности C-Leg 4</b>. C-Leg 4 распознает фазу покоя и обеспечивает спокойное положение стоя со слегка согнутым коленом и высокой степенью демпфирования. При нахождении на наклонных участках и неровных поверхностях такое решение имеет большое значение. Когда пользователь начинает ходьбу, коленный шарнир получает соответствующий сигнал и деактивирует функцию покоя.
+                <br />
+                Еще одна новинка: демпфирование разгибания в фазе опоры раньше настраивалось индивидуально. <b>Новый C-Leg 4 автоматически выбирает и применяет оптимальное для пользователя значение, которое меняется с каждым шагом</b>.</p>
+                <p><b>Еще лучше, еще надежнее: защита от спотыкания</b>. Повышенное по отношению к фазе опоры сопротивление остается активированным во время всего разгибания шарнира в фазу переноса. Новый C-Leg 4 обеспечивает эффективное предотвращение падения.</p>
+                <p><b>Безопасная ходьба назад</b>.  С C-Leg 4 пользователь может выполнять ходьбу назад без срабатывания шарнира выполнения фазы переноса.</p>
+                <p><b>Умный коленный шарнир – умная система управления</b>. Мобильное приложение Cockpit впервые предлагает пользователям возможность управления модулем C-Leg 4 непосредственно через смартфон (с операционной системой Android). В качестве опционального аксессуара можно заказать дистанционное управление. Для коммуникации с мобильным приложением или дистанционным управлением C-Leg 4 имеет встроенный модуль Bluetooth®.</p>
+                <p><b>Автоматическая функция покоя в положении сидя</b>. Функция покоя в положении сидя представляет собой еще одну новинку в шарнире C-Leg 4. Как только пользователь приседает, шарнир автоматически переключается в режим свободного разгибания и сгибания. Это позволяет пользователю принять удобную позу и экономит энергию.</p>
+
+                <!--product additional info-->
+                <ul class="b-view">
+                    <li class="b-view__item">
+                        <figure class="b-view__block">
+                            <a href="https://youtu.be/mawTCv4BvGY" class="b-view__link b-view__link--video js-video" data-title="Изготовление протеза">
+                                <div class="b-view__thumb">
+                                    <img src="img/loader.gif" class="b-view__img js-lazyimg" data-src="http://placehold.it/314x177/bbff55" alt="" />
+                                    <noscript>
+                                        <img src="http://placehold.it/314x177/bbff55" class="b-view__img" alt="" />
+                                    </noscript>
+                                </div>
+                            </a>
+                            <figcaption class="b-view__title">
+                                <a href="https://youtu.be/mawTCv4BvGY" class="js-video" data-title="Изготовление протеза">Изготовление протеза</a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="b-view__item">
+                        <figure class="b-view__block">
+                            <a href="img/del/seo.pdf" class="b-view__link" target="_blank">
+                                <div class="b-view__thumb">
+                                    <img src="img/loader.gif" class="b-view__img js-lazyimg" data-src="img/del/seo.jpg" alt="" />
+                                    <noscript>
+                                        <img src="img/del/seo.jpg" class="b-view__img" alt="" />
+                                    </noscript>
+                                </div>
+                            </a>
+                            <figcaption class="b-view__title">
+                                <a href="img/del/seo.pdf" target="_blank">C-Leg 4 (брошюра)</a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+                <!--/product additional info-->
+            </section>
+            <!--product-->
+
+            <!--question-answer-->
+            <section class="b-question">
+                <header class="b-question__header">
+                    <h2 class="b-question__title">Вопросы и ответы</h2>
+                    <button type="button" class="g-btn" data-modal="#query">Задать вопрос</button>
+                </header>
+
+                <div class="b-question__query">
+                    <div class="b-question__item">
+                        <time class="b-question__date" datetime="2015-10-19T14:19">19.10.2015&emsp;14:19</time>
+                        <div class="b-question__inner">
+                            <p>Оплачивает ли государство стоимость протезов Otto Bock?</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="b-question__answer">
+                    <div class="b-question__item">
+                        <time class="b-question__date" datetime="2015-10-19T14:30">19.10.2015&emsp;14:30</time>
+                        <div class="b-question__inner">
+                            <p>Да, но ограничено.  Многие коленные механизмы, стопы, комплектующие и т.д. фирмы Otto Bock HealCare GmbH рекомендованы к применению при бесплатном протезировании за счет бюджета. Предлагаем обратиться на местные протезно-ортопедические предприятия, которые имеют договор с ПО "Укрпротез".</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="b-question__query">
+                    <div class="b-question__item">
+                        <time class="b-question__date" datetime="2015-10-15T16:45">15.10.2015&emsp;16:45</time>
+                        <div class="b-question__inner">
+                            <p>Сколько будет стоить протез?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="b-question__answer">
+                    <div class="b-question__item">
+                        <time class="b-question__date" datetime="2015-10-15T17:00">15.10.2015&emsp;17:00</time>
+                        <div class="b-question__inner">
+                            <p>Наше предприятие является представителем «Otto Bock HealthCare GmbH» и производит протезы по технологии и из комплектующих этой фирмы. Процесс изготовления включает в себя консультацию и обмен информацией с немецкими специалистами. На изготовленные в нашей лаборатории протезы распространяются стандартные гарантийные условия ф. “Otto Bock”</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="b-question__query">
+                    <div class="b-question__item">
+                        <time class="b-question__date" datetime="2015-10-19T14:19">19.10.2015&emsp;14:19</time>
+                        <div class="b-question__inner">
+                            <p>Оплачивает ли государство стоимость протезов Otto Bock?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="b-question__answer">
+                    <div class="b-question__item">
+                        <time class="b-question__date" datetime="2015-10-19T14:30">19.10.2015&emsp;14:30</time>
+                        <div class="b-question__inner">
+                            <p>Да, но ограничено.  Многие коленные механизмы, стопы, комплектующие и т.д. фирмы Otto Bock HealCare GmbH рекомендованы к применению при бесплатном протезировании за счет бюджета. Предлагаем обратиться на местные протезно-ортопедические предприятия, которые имеют договор с ПО "Укрпротез".</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="b-question__query">
+                    <div class="b-question__item">
+                        <time class="b-question__date" datetime="2015-10-15T16:45">15.10.2015&emsp;16:45</time>
+                        <div class="b-question__inner">
+                            <p>Сколько будет стоить протез?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="b-question__answer">
+                    <div class="b-question__item">
+                        <time class="b-question__date" datetime="2015-10-15T17:00">15.10.2015&emsp;17:00</time>
+                        <div class="b-question__inner">
+                            <p>Наше предприятие является представителем «Otto Bock HealthCare GmbH» и производит протезы по технологии и из комплектующих этой фирмы. Процесс изготовления включает в себя консультацию и обмен информацией с немецкими специалистами. На изготовленные в нашей лаборатории протезы распространяются стандартные гарантийные условия ф. “Otto Bock”</p>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="b-question__footer">
+                    <button type="button" class="g-btn g-btn--alt g-btn--wide">Показать еще</button>
+                </footer>
+            </section>
+            <!--/question-answer-->
+        </div><!--/.g-container-->
+
+        <!--modal windows-->
+        <div class="modal" id="callback">
+            <form class="modal__content">
+                <span class="g-title">Заказать обратный звонок</span>
+                <p>Укажите Ваше имя и номер телефона, и мы перезвоним Вам в ближайшее время</p>
+                <div class="g-row">
+                    <div class="g-col g-col--one-half">
+                        <div class="g-input-field">
+                            <label class="g-visuallyhidden">Ваше имя</label>
+                            <input type="text" class="g-input" placeholder="Ваше имя" required />
+                        </div>
+                    </div>
+                    <div class="g-col g-col--one-half">
+                        <div class="g-input-field">
+                            <label class="g-visuallyhidden">Ваш телефон</label>
+                            <input type="text" class="g-input js-phone-input" placeholder="Номер телефона" required />
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="g-btn">Отправить</button>
+            </form>
+        </div>
+
+        <div class="modal" id="order">
+            <form class="modal__content">
+                <span class="g-title">Отправить заявку</span>
+                <p>Если у вас есть вопросы или вы хотите заказать товар, нужно заполнить поля, отправить заявку и мы вам обязательно перезвоним </p>
+                <div class="g-row">
+                    <div class="g-col g-col--one-half">
+                        <div class="g-input-field">
+                            <label class="g-visuallyhidden">Ваше имя</label>
+                            <input type="text" class="g-input" placeholder="Ваше имя" required />
+                        </div>
+                    </div>
+                    <div class="g-col g-col--one-half">
+                        <div class="g-input-field">
+                            <label class="g-visuallyhidden">Ваш телефон</label>
+                            <input type="text" class="g-input js-phone-input" placeholder="Номер телефона" required />
+                        </div>
+                    </div>
+                </div>
+                <div class="g-input-field">
+                    <label class="g-visuallyhidden">Комментарий</label>
+                    <textarea class="g-textarea" placeholder="Комментарий"></textarea>
+                </div>
+                <button type="submit" class="g-btn">Отправить</button>
+            </form>
+        </div>
+
+
+        <div class="modal modal--wide" id="videomodal">
+            <div class="modal__content">
+                <div class="g-subtitle"></div>
+                <div class="g-video-wrap">
+                    <iframe width="560" height="315" src="img/logo.png"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="query">
+            <form class="modal__content">
+                <span class="g-title">Задать вопрос</span>
+                <p>Заполните поля формы - наши специалисты ответят Вам в ближайшее время!</p>
+                <div class="g-row">
+                    <div class="g-col g-col--one-half">
+                        <div class="g-input-field">
+                            <label class="g-visuallyhidden">Ваше имя</label>
+                            <input type="text" class="g-input" placeholder="Ваше имя" required />
+                        </div>
+                    </div>
+                    <div class="g-col g-col--one-half">
+                        <div class="g-input-field">
+                            <label class="g-visuallyhidden">Ваш email</label>
+                            <input type="email" class="g-input" placeholder="Ваш email" required />
+                        </div>
+                    </div>
+                </div>
+                <div class="g-input-field">
+                    <label class="g-visuallyhidden">Вопрос</label>
+                    <textarea class="g-textarea" placeholder="Ваш вопрос" required></textarea>
+                </div>
+                <button type="submit" class="g-btn">Отправить</button>
+            </form>
+        </div>
+        <!--/modal windows-->
+    </main>
+    <!--/main content-->
+
+    <!--footer-->
+    <footer class="b-footer">
+        <!--mobile menu-->
+        <nav class="page__panel js-mmenu">
+            <ul class="m-menu">
+                <li class="m-menu__item">
+                    <label class="m-menu__label">Меню</label>
+                </li>
+                <li class="m-menu__item">
+                    <a href="#" class="m-menu__link">Протезирование</a>
+                </li>
+                <li class="m-menu__item">
+                    <a href="#" class="m-menu__link">Ортопедия</a>
+                </li>
+                <li class="m-menu__item">
+                    <a href="#" class="m-menu__link">Реабилитация</a>
+                </li>
+                <li class="m-menu__item">
+                    <a href="#" class="m-menu__link">Специалистам</a>
+                </li>
+                <li class="m-menu__divider"></li>
+                <li class="m-menu__item">
+                    <a href="about.html" class="m-menu__link">О компании</a>
+                </li>
+                <li class="m-menu__item">
+                    <a href="contacts.html" class="m-menu__link">Контакты</a>
+                </li>
+                <li class="m-menu__item">
+                    <a href="sertificates.html" class="m-menu__link">Сертификаты</a>
+                </li>
+                <li class="m-menu__item">
+                    <a href="specialists.html" class="m-menu__link">Специалисты</a>
+                </li>
+                <li class="m-menu__item">
+                    <a href="quetions.html" class="m-menu__link">Вопросы</a>
+                </li>
+                <li class="m-menu__item">
+                    <a href="reviews.html" class="m-menu__link">Отзывы</a>
+                </li>
+            </ul>
+        </nav>
+        <!--/mobile menu-->
+        <!--order form-->
+        <div class="b-footer__form">
+            <div class="g-container">
+                <form class="f-form">
+                    <div class="f-form__header">
+                        <span class="f-form__title">Обратная связь</span>
+                        <p>Если у вас есть вопросы или вы хотите заказать товар, нужно заполнить поля, отправить заявкуи мы вам обязательно перезвоним</p>
+                    </div>
+
+                    <div class="g-input-field">
+                        <label class="g-visuallyhidden">Ваше имя</label>
+                        <input type="text" class="g-input" placeholder="Ваше имя" required />
+                    </div>
+                    <div class="g-input-field">
+                        <label class="g-visuallyhidden">Ваше имя</label>
+                        <input type="email" class="g-input" placeholder="Email" required />
+                    </div>
+                    <div class="g-input-field">
+                        <label class="g-visuallyhidden">Комментарий</label>
+                        <textarea class="g-textarea" placeholder="Комментарий"></textarea>
+                    </div>
+                    <div class="g-text-center">
+                        <button type="submit" class="f-form__btn">Отправить заявку</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--/order form-->
+        <!--sole-->
+        <div class="b-footer__sole">
+            <div class="g-container">
+                <span class="b-footer__copyright">Copyright by АЕ. БРИК <i class="icon-copyright">&nbsp;</i> 2011-2016</span>
+            </div>
+        </div>
+        <!--/sole-->
+    </footer>
+    <!--/footer-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/app.min.js"></script>
+</body>
+</html>

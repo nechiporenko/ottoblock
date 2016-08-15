@@ -1,0 +1,132 @@
+﻿@import "../../modules/_base.scss";
+/*Product section*/
+.b-product{
+    padding:25px 10px;
+    margin-bottom:35px;
+    background:#fff;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    @extend .g-shadow-hover;
+    box-sizing:border-box;
+    @extend .g-clearfix;
+
+    @include media($tablet){
+        padding:35px 25px;
+    }
+
+    @include media($large){
+        padding:35px 70px;
+        @include font-size(16px);
+    }
+}
+
+.b-product__order{//блок для кнопки "Оставить заявку"
+    padding:15px 0 50px;
+
+    @include media($large){
+        padding-bottom:80px;
+    }
+}
+
+.b-product__btn{
+    @extend .h-top__order;
+}
+
+//доп.информация о продукте (видео, pdf)
+.b-view{
+    padding:50px 0 0;
+    margin:0;
+    list-style-type:none;
+    @extend .g-clearlist;
+    @extend .g-clearfix;
+}
+
+.b-view__item{
+    @extend .g-column;
+
+    @include media($tablet){
+        @include span-columns(6);
+        @include omega(2n);
+    }
+}
+
+.b-view__block{
+    max-width:320px;
+    margin:0 auto $project-line-height;
+}
+
+
+
+.b-view__link{
+    display:block;
+    border: 3px solid $border-color;
+    @extend .g-shadow-hover;
+    position:relative;
+
+    &:hover,
+    &:active{
+        border-color:$primary;
+
+        &:before{
+            background:$primary;
+        }
+        &:after{
+            color:#fff;
+        }
+    }
+
+    &:before{//кружок вокруг иконки play
+        content:'';
+        display:block;
+        @include size(70px);
+        border-radius:50%;
+        @extend .g-align;
+        z-index:3;
+        background:rgba($primary, .8);
+        @include transition(background .3s ease);
+        z-index:4;
+    }
+
+    &:after{
+        content:'\e80f'; //иконка pdf (по умолчанию)
+        font-family:'fontello';
+        color:#adacd5;
+        @include font-size(24px);
+        @extend .g-align;
+        z-index:5;
+        @include transition(color .3s ease);
+    }
+}
+
+.b-view__link--video{
+    &:after{
+        content:'\e818'; //иконка play
+    }
+}
+
+.b-view__thumb{
+    display:block;
+    position:relative;
+
+    &:after{
+        content:'';
+        display:block;
+        padding-top:56.25%; // 16:9
+    }
+}
+
+.b-view__img{
+    @extend .g-img-centered;
+}
+.b-view__title{
+    padding:5px 0;
+    text-align:center;
+    @include font-size(18px);
+
+    a{
+        color:$text-color;
+
+        &:hover{
+            color:$primary;
+        }
+    }
+}

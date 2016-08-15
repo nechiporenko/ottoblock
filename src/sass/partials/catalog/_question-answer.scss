@@ -1,0 +1,97 @@
+﻿@import "../../modules/_base.scss";
+/*Product Question - Answer*/
+.b-question{
+    @extend .b-product;
+}
+.b-question__header{
+    margin-bottom:30px;
+    position:relative;
+    padding-bottom:10px;
+    border-bottom:1px solid $border-color;
+    text-align:center;
+}
+
+.b-question__title{
+    font-family:$font-regular;
+    font-weight:normal;
+    @include font-size(24px);
+    color:$text-color;
+
+    @include media($desktop){
+        position:absolute;
+        left:0;
+        bottom:8px;
+        margin:0;
+    }
+}
+
+.b-question__item{
+    padding:8px 15px;
+    min-height:28px;
+    border:1px solid $border-color;
+    border-radius:16px;
+
+    p, ul, ol{
+        margin:$project-line-height/2 0 $project-line-height/2 10px;
+    }
+}
+
+.b-question__query,
+.b-question__answer{
+    margin-bottom:$project-line-height;
+    padding-left:52px;
+    position:relative;
+
+    &:before{
+        content:'';
+        @include size(44px);
+        position:absolute;
+        left:0;
+        top:50%;
+        margin-top:-22px;
+    }
+
+    @include media($desktop){
+        padding-left:74px;
+        left:20px;
+    }
+}
+
+.b-question__query{
+    &:before{
+        background:url(../img/icon-query.png) center center no-repeat;
+    }
+}
+
+
+.b-question__answer{
+
+    &:before{
+        background:url(../img/icon-user.png) center center no-repeat;
+    }
+
+    .b-question__item{
+        @include font-size(14px);
+    }
+
+
+    @include media($desktop){
+        padding-left:165px;
+
+        &:before{
+            left:115px;
+        }
+    }
+}
+
+.b-question__date{
+    display:block;
+    margin-bottom:$project-line-height/2;
+    font-size:rem(16px);
+    line-height:1;
+    color:$primary;
+}
+
+.b-question__footer{
+    text-align:center;
+}

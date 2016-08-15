@@ -16,7 +16,9 @@
 // Слайдер дипломов
 // Слайдеры видео
 // Рейтинг
-// Покажем * после обязательных полей в формах (футер)
+// Покажем * после обязательных полей в формах
+// Галерея в карточке товара
+// Откроем видео в модальном окне (клик на .js-video)
 // Если браузер не знает о плейсхолдерах в формах
 
 jQuery(document).ready(function ($) {
@@ -720,19 +722,7 @@ jQuery(document).ready(function ($) {
                 el.attr('src', source);
                 el.removeClass('js-video-thumb');
             };
-        };
-
-        method.getYoutubeID = function (url) {//парсим youtube-ссылку, возвращаем id видео
-            var regExp = /.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]*).*/;
-            var match = url.match(regExp),
-                urllink;
-            if (match && match[1].length == 11) {
-                urllink = match[1];
-            } else {
-                urllink = false;
-            }
-            return urllink;
-        };
+        };        
 
         for (var i = 0; i < count; i++) {//запускаем слайдеры
             slider[i] = $slider.eq(i);
@@ -749,8 +739,8 @@ jQuery(document).ready(function ($) {
         $slider.on('click', '.b-video__link', function (e) {//откроем видео в модальном окне
             e.preventDefault();
             var link = $(this).attr('href'),
-                title = $(this).parent().find('.b-video__title').text();
-                id = method.getYoutubeID(link);
+                title = $(this).parent().find('.b-video__title').text(),
+                id = getYoutubeID(link);//см. дальше - "Откроем видео в модальном окне"
 
             if (id) {
                 var $modal = $('#videomodal');
@@ -811,12 +801,105 @@ jQuery(document).ready(function ($) {
     //---------------------------------------------------------------------------------------
     (function () {
         $('.g-input-field').each(function () {
-            var $el = $(this).find('.g-input, .g-select, g-textarea');
+            var $el = $(this).find('.g-input, .g-select, .g-textarea');
             if ($el.prop('required')) {
                 $(this).addClass('required');
             }
         });
     })();
+
+    //
+    // Галерея в карточке товара
+    //---------------------------------------------------------------------------------------
+    function initProductGallery() {
+        var $target = $('.js-gallery-target').find('img'), //картинка в блоке предпросмотра
+            $el = $('.js-gallery').children('li'), //превьюшки галереи
+            index = 0; //индекс картинки в галерее
+
+        $('.js-gallery-large').find('a').simpleLightbox({//натравили лайтбокс на скрытый список крупных изображений
+            navText: ['<i class="icon-left-open-big"></i>', '<i class="icon-right-open-big"></i>'],
+            captions: true,
+            captionSelector: 'self',
+            captionType: 'data',
+            captionsData: 'caption',
+            close: true,
+            closeText: '<i class="icon-cancel"></i>',
+            showCounter: true,
+            disableScroll: false,
+        });
+
+        $el.filter(':first').find('figure').addClass('active');//добавили класс к первой превьюшке
+        if ($el.length > 3) {//если более 3 превьюшек - запустим их в слайдере
+            $('.js-gallery').bxSlider({
+                minSlides: 3,
+                maxSlides: 3,
+                moveSlides: 1,
+                slideWidth: 115,
+                slideMargin: 2,
+                auto: false,
+                pager: false,
+                infiniteLoop: false,
+                hideControlOnEnd: true,
+                useCSS: false,
+                nextText: '<i class="icon-right-open-big"></i>',
+                prevText: '<i class="icon-left-open-big"></i>',
+            });
+        };
+
+        $('.js-gallery').on('click', 'figure', function () {//клик по превьюшке - изменим картинку в блоке предпросмотра
+            var $el = $(this);
+            if ($el.hasClass('active')) {
+                return false;
+            } else {
+                var src = $el.data('img');//взяли картинку среднего размера
+                if (src) {
+                    $('.js-gallery figure').removeClass('active');
+                    $el.addClass('active');
+                    $target.attr('src', src);//отправили в блок предпросмотра
+                    index = $(this).parent('li').index();//изменили индекс
+                };
+            };
+        });
+
+        $('.js-gallery-target').on('click', function () {//откроем большую картинку в лайтбоксе
+            $('.js-gallery-large li').eq(index).children('a').click();
+        });
+    }
+
+    if ($('.js-gallery').length > 0) {
+        initProductGallery();
+    };
+
+
+    //
+    // Откроем видео в модальном окне (клик на .js-video)
+    //---------------------------------------------------------------------------------------
+    $('.js-video').on('click', function (e) {//откроем видео в модальном окне
+        e.preventDefault();
+        var link = $(this).attr('href'),
+            title = $(this).data('title'),
+        id = getYoutubeID(link);
+
+        if (id) {
+            var $modal = $('#videomodal');
+            $modal.find('iframe').attr('src', 'https://www.youtube.com/embed/' + id + '?rel=0&amp;showinfo=0;autoplay=1');//передали ссылку на видео
+            $modal.find('.g-subtitle').text(title);//передали название
+            showModal.open('#videomodal');
+        };
+    });
+
+    function getYoutubeID(url) {//парсим youtube-ссылку, возвращаем id видео
+        var regExp = /.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]*).*/;
+        var match = url.match(regExp),
+            urllink;
+        if (match && match[1].length == 11) {
+            urllink = match[1];
+        } else {
+            urllink = false;
+        }
+        return urllink;
+    };
+
 
     //
     // Если браузер не знает о плейсхолдерах в формах

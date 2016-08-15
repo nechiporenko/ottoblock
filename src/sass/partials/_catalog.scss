@@ -1,3 +1,6 @@
 ﻿@import "../modules/_base.scss";
 
-@import "catalog/_b-part.scss";
+@import "catalog/_b-part.scss";//блоки каталога
+@import "catalog/_product.scss";//секция карточки товара
+@import "catalog/_gallery.scss";//галерея в карточке товара
+@import "catalog/_question-answer.scss";//секция вопрос - ответ
