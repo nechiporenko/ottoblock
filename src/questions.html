@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="ru"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru"> <!--<![endif]-->
+<head>
+    <title>Ottoblock Questions Page</title>
+    @@include('templates/head.html')
+</head>
+<body class="page">
+    <!--header-->
+    @@include('templates/header.html')
+
+    <!--main content-->
+    <main class="page__content">
+        <div class="g-container">
+            <header class="page__header">
+                <!--breadcrumbs-->
+                <ol class="breadcrumbs">
+                    <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                        <a href="index.html" class="breadcrumbs__link" itemprop="url">
+                            <span itemprop="title">Главная</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        Вопросы
+                    </li>
+                </ol>
+                <!--/breadcrumbs-->
+                <h1 class="g-title g-text-center">Часто задаваемые вопросы</h1>
+            </header>
+            
+            <section class="page__part">
+                <form class="g-inner">
+                    <h2 class="g-subtitle g-text-center">Задать вопрос</h2>
+                    <div class="g-row">
+                        <div class="g-col g-col--one-half">
+                            <div class="g-input-field">
+                                <label class="g-visuallyhidden">Ваше имя</label>
+                                <input type="text" class="g-input" placeholder="Ваше имя" required />
+                            </div>
+                        </div>
+                        <div class="g-col g-col--one-half">
+                            <div class="g-input-field">
+                                <label class="g-visuallyhidden">Ваш email</label>
+                                <input type="email" class="g-input" placeholder="Ваш email" required />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="g-input-field">
+                        <label class="g-visuallyhidden">Вопрос</label>
+                        <textarea class="g-textarea" placeholder="Ваш вопрос" required></textarea>
+                    </div>
+                    <div class="g-text-center">
+                        <button type="submit" class="g-btn">Отправить</button>
+                    </div>
+                </form>
+            </section>
+        </div><!--/.g-container-->
+
+        <!--modal windows-->
+        @@include('templates/modals.html')
+        <!--/modal windows-->
+    </main>
+    <!--/main content-->
+
+    <!--footer-->
+    @@include('templates/footer.html')
+</body>
+</html>

@@ -1,22 +1,7 @@
 ﻿@import "../../modules/_base.scss";
 /*Product section*/
 .b-product{
-    padding:25px 10px;
-    margin-bottom:35px;
-    background:#fff;
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1);
-    @extend .g-shadow-hover;
-    box-sizing:border-box;
-    @extend .g-clearfix;
-
-    @include media($tablet){
-        padding:35px 25px;
-    }
-
-    @include media($large){
-        padding:35px 70px;
-        @include font-size(16px);
-    }
+    @extend .page__part;
 }
 
 .b-product__order{//блок для кнопки "Оставить заявку"

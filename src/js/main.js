@@ -17,6 +17,7 @@
 // Слайдеры видео
 // Рейтинг
 // Покажем * после обязательных полей в формах
+// Стилизуем input file field
 // Галерея в карточке товара
 // Откроем видео в модальном окне (клик на .js-video)
 // Если браузер не знает о плейсхолдерах в формах
@@ -807,6 +808,21 @@ jQuery(document).ready(function ($) {
             }
         });
     })();
+
+    //
+    // Стилизуем input file field
+    //---------------------------------------------------------------------------------------
+    $(document).on('change', '.js-input-file input[type="file"]', function () {
+        var file_field = $(this).closest('.js-input-file');
+        var path_input = file_field.find('input.g-input-file__path');
+        var files = $(this)[0].files;
+        var file_names = [];
+        for (var i = 0; i < files.length; i++) {
+            file_names.push(files[i].name);
+        }
+        path_input.val(file_names.join(", "));
+        path_input.trigger('change');
+    });
 
     //
     // Галерея в карточке товара

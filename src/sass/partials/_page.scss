@@ -103,6 +103,26 @@
     text-align:center;
 }
 
+
+.page__part{//альтернативный раздел страницы
+    padding:25px 10px;
+    margin-bottom:35px;
+    background:#fff;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    @extend .g-shadow-hover;
+    box-sizing:border-box;
+    @extend .g-clearfix;
+
+    @include media($tablet){
+        padding:35px 25px;
+    }
+
+    @include media($large){
+        padding:35px 70px;
+        @include font-size(16px);
+    }
+}
+
 @import "page/_breadcrumbs.scss";//хлебные крошки
 @import "page/_page-hero-banner.scss";//баннер страницы (текст над статичной картинкой)
 @import "page/_hero-slider.scss";//слайдер на главной странице

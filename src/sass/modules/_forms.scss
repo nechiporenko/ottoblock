@@ -108,3 +108,57 @@ input[type="radio"] {
 }
 
 
+//File input
+.g-input-file{
+    position:relative;
+    margin-bottom:25px;
+
+    input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+      }
+}
+
+.g-input-file__btn{
+    float:left;
+    @include size(36px);
+    border-radius:50%;
+    line-height:36px;
+    text-align:center;
+    background:$primary-alt;
+    color:#fff;
+    @include transition(background .2s ease-out);
+
+    &:hover{
+        background:darken($primary-alt, 10%);
+    }
+}
+.g-input-file__wrapper{
+    overflow: hidden;
+    padding-left: 10px;
+}
+
+.g-input-file__path{
+    display:inline-block;
+    vertical-align:middle;
+    width:100%;
+    box-sizing:border-box;
+    height:36px;
+    background:none;
+    border:none;
+
+    @include placeholder{
+        color:#888888;
+    }
+}
+
+

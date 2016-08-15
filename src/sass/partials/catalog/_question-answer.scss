@@ -1,7 +1,7 @@
 ﻿@import "../../modules/_base.scss";
 /*Product Question - Answer*/
 .b-question{
-    @extend .b-product;
+    @extend .page__part;
 }
 .b-question__header{
     margin-bottom:30px;
@@ -53,7 +53,10 @@
 
     @include media($desktop){
         padding-left:74px;
-        left:20px;
+        
+        &:before{
+            left:20px;
+        }
     }
 }
 
