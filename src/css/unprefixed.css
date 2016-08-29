@@ -2836,7 +2836,7 @@ input[type="radio"] {
     width: 50%;
   }
   .b-tabs--3x .b-tabs__item {
-    width: 100%/3;
+    width: 33.3333333333%;
   }
 }
 

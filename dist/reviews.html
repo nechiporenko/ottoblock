@@ -320,8 +320,15 @@
                     <div class="g-text-center">
                         <button type="submit" class="g-btn">Отправить</button>
                     </div>
-                    
                 </form>
+            </section>
+
+            <section class="page__part">
+                <div class="g-inner">
+                    <h5 class="g-subtitle">Заголовок отзыва</h5>
+                    <p>текст отзыва</p>
+                    <button class="g-btn g-btn--alt" data-modal="#comment">Комментировать</button>
+                </div>
             </section>
         </div><!--/.g-container-->
 
@@ -374,6 +381,46 @@
             </form>
         </div>
 
+
+        <div class="modal" id="comment">
+            <form class="modal__content">
+                <h6 class="g-subtitle g-text-center">Комментарий</h6>
+                <div class="g-row">
+                    <div class="g-col g-col--one-half">
+                        <div class="g-input-field">
+                            <label class="g-visuallyhidden">Ваше имя</label>
+                            <input type="text" class="g-input" placeholder="Ваше имя" required />
+                        </div>
+                    </div>
+                    <div class="g-col g-col--one-half">
+                        <div class="g-input-field">
+                            <label class="g-visuallyhidden">Ваш email</label>
+                            <input type="email" class="g-input" placeholder="Ваш email" required />
+                        </div>
+                    </div>
+                </div>
+                <div class="g-input-field">
+                    <label class="g-visuallyhidden">Тема</label>
+                    <input type="text" class="g-input" placeholder="Тема отзыва" />
+                </div>
+                <div class="g-input-field">
+                    <label class="g-visuallyhidden">Комментарий</label>
+                    <textarea class="g-textarea" placeholder="Ваш комментарий" required></textarea>
+                </div>
+                <div class="g-input-file js-input-file">
+                    <div class="g-input-file__btn">
+                        <i class="icon-file-archive"></i>
+                        <input type="file" />
+                    </div>
+                    <div class="g-input-file__wrapper">
+                        <input type="text" class="g-input-file__path" placeholder="Прикрепить фото/видео" />
+                    </div>
+                </div>
+                <div class="g-text-center">
+                    <button type="submit" class="g-btn">Отправить</button>
+                </div>
+            </form>
+        </div>
         <!--/modal windows-->
     </main>
     <!--/main content-->
