@@ -42,7 +42,7 @@
         <!--order form-->
         <div class="b-footer__form">
             <div class="g-container">
-                <form class="f-form">
+                <form class="f-form" id="ftr_form">
                     <div class="f-form__header">
                         <span class="f-form__title">Обратная связь</span>
                         <p>Если у вас есть вопросы или вы хотите заказать товар, нужно заполнить поля, отправить заявкуи мы вам обязательно перезвоним</p>
@@ -50,11 +50,11 @@
 
                     <div class="g-input-field">
                         <label class="g-visuallyhidden">Ваше имя</label>
-                        <input type="text" class="g-input" placeholder="Ваше имя" required />
+                        <input type="text" class="g-input" placeholder="Ваше имя" name="ftr_name" id="ftr_name" required />
                     </div>
                     <div class="g-input-field">
                         <label class="g-visuallyhidden">Ваше имя</label>
-                        <input type="email" class="g-input" placeholder="Email" required />
+                        <input type="email" class="g-input" placeholder="Email" name="ftr_mail" id="ftr_mail" required />
                     </div>
                     <div class="g-input-field">
                         <label class="g-visuallyhidden">Комментарий</label>
@@ -80,3 +80,9 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
     <script src="js/app.min.js"></script>
+
+    <!--form validation scripts-->
+    <script src="js/vendor/jquery.validate.min.js"></script>
+    <script src="js/vendor/jquery.validate.messages_ru.min.js"></script>
+    <script src="js/form-validate.js"></script>
+    <!--/form validation scripts-->

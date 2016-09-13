@@ -284,19 +284,19 @@
             </header>
             
             <section class="page__part">
-                <form class="g-inner">
+                <form class="g-inner" id="review_form">
                     <h2 class="g-subtitle g-text-center">Оставить отзыв</h2>
                     <div class="g-row">
                         <div class="g-col g-col--one-half">
                             <div class="g-input-field">
                                 <label class="g-visuallyhidden">Ваше имя</label>
-                                <input type="text" class="g-input" placeholder="Ваше имя" required />
+                                <input type="text" class="g-input" placeholder="Ваше имя" name="rvw_name" id="rvw_name" required />
                             </div>
                         </div>
                         <div class="g-col g-col--one-half">
                             <div class="g-input-field">
                                 <label class="g-visuallyhidden">Ваш email</label>
-                                <input type="email" class="g-input" placeholder="Ваш email" required />
+                                <input type="email" class="g-input" placeholder="Ваш email" name="rvw_mail" id="rvw_mail" required />
                             </div>
                         </div>
                     </div>
@@ -306,7 +306,7 @@
                     </div>
                     <div class="g-input-field">
                         <label class="g-visuallyhidden">Отзыв</label>
-                        <textarea class="g-textarea" placeholder="Ваш отзыв" required></textarea>
+                        <textarea class="g-textarea" placeholder="Ваш отзыв" name="rvw_msg" id="rvw_msg" required></textarea>
                     </div>
                     <div class="g-input-file js-input-file">
                         <div class="g-input-file__btn">
@@ -341,13 +341,13 @@
                     <div class="g-col g-col--one-half">
                         <div class="g-input-field">
                             <label class="g-visuallyhidden">Ваше имя</label>
-                            <input type="text" class="g-input" placeholder="Ваше имя" required />
+                            <input type="text" class="g-input" placeholder="Ваше имя" name="clb_name" id="clb_name" required />
                         </div>
                     </div>
                     <div class="g-col g-col--one-half">
                         <div class="g-input-field">
                             <label class="g-visuallyhidden">Ваш телефон</label>
-                            <input type="text" class="g-input js-phone-input" placeholder="Номер телефона" required />
+                            <input type="text" class="g-input js-phone-input" placeholder="Номер телефона" name="clb_phone" id="clb_phone" required />
                         </div>
                     </div>
                 </div>
@@ -363,13 +363,13 @@
                     <div class="g-col g-col--one-half">
                         <div class="g-input-field">
                             <label class="g-visuallyhidden">Ваше имя</label>
-                            <input type="text" class="g-input" placeholder="Ваше имя" required />
+                            <input type="text" class="g-input" placeholder="Ваше имя" name="ord_name" id="ord_name" required />
                         </div>
                     </div>
                     <div class="g-col g-col--one-half">
                         <div class="g-input-field">
                             <label class="g-visuallyhidden">Ваш телефон</label>
-                            <input type="text" class="g-input js-phone-input" placeholder="Номер телефона" required />
+                            <input type="text" class="g-input js-phone-input" placeholder="Номер телефона" name="ord_phone" id="ord_phone" required />
                         </div>
                     </div>
                 </div>
@@ -389,13 +389,13 @@
                     <div class="g-col g-col--one-half">
                         <div class="g-input-field">
                             <label class="g-visuallyhidden">Ваше имя</label>
-                            <input type="text" class="g-input" placeholder="Ваше имя" required />
+                            <input type="text" class="g-input" placeholder="Ваше имя" name="cmt_name" id="cmt_name" required />
                         </div>
                     </div>
                     <div class="g-col g-col--one-half">
                         <div class="g-input-field">
                             <label class="g-visuallyhidden">Ваш email</label>
-                            <input type="email" class="g-input" placeholder="Ваш email" required />
+                            <input type="email" class="g-input" placeholder="Ваш email" name="cmt_mail" id="cmt_mail" required />
                         </div>
                     </div>
                 </div>
@@ -405,7 +405,7 @@
                 </div>
                 <div class="g-input-field">
                     <label class="g-visuallyhidden">Комментарий</label>
-                    <textarea class="g-textarea" placeholder="Ваш комментарий" required></textarea>
+                    <textarea class="g-textarea" placeholder="Ваш комментарий" name="cmt_msg" id="cmt_msg" required></textarea>
                 </div>
                 <div class="g-input-file js-input-file">
                     <div class="g-input-file__btn">
@@ -470,7 +470,7 @@
         <!--order form-->
         <div class="b-footer__form">
             <div class="g-container">
-                <form class="f-form">
+                <form class="f-form" id="ftr_form">
                     <div class="f-form__header">
                         <span class="f-form__title">Обратная связь</span>
                         <p>Если у вас есть вопросы или вы хотите заказать товар, нужно заполнить поля, отправить заявкуи мы вам обязательно перезвоним</p>
@@ -478,11 +478,11 @@
 
                     <div class="g-input-field">
                         <label class="g-visuallyhidden">Ваше имя</label>
-                        <input type="text" class="g-input" placeholder="Ваше имя" required />
+                        <input type="text" class="g-input" placeholder="Ваше имя" name="ftr_name" id="ftr_name" required />
                     </div>
                     <div class="g-input-field">
                         <label class="g-visuallyhidden">Ваше имя</label>
-                        <input type="email" class="g-input" placeholder="Email" required />
+                        <input type="email" class="g-input" placeholder="Email" name="ftr_mail" id="ftr_mail" required />
                     </div>
                     <div class="g-input-field">
                         <label class="g-visuallyhidden">Комментарий</label>
@@ -508,5 +508,11 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
     <script src="js/app.min.js"></script>
+
+    <!--form validation scripts-->
+    <script src="js/vendor/jquery.validate.min.js"></script>
+    <script src="js/vendor/jquery.validate.messages_ru.min.js"></script>
+    <script src="js/form-validate.js"></script>
+    <!--/form validation scripts-->
 </body>
 </html>

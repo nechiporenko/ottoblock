@@ -984,6 +984,7 @@ textarea {
 .g-textarea::-webkit-input-placeholder {
   color: #888888;
   text-overflow: ellipsis;
+  opacity: 1;
 }
 
 .g-input::-moz-placeholder, .b-search__input::-moz-placeholder,
@@ -991,6 +992,7 @@ textarea {
 .g-textarea::-moz-placeholder {
   color: #888888;
   text-overflow: ellipsis;
+  opacity: 1;
 }
 
 .g-input:-moz-placeholder, .b-search__input:-moz-placeholder,
@@ -998,6 +1000,7 @@ textarea {
 .g-textarea:-moz-placeholder {
   color: #888888;
   text-overflow: ellipsis;
+  opacity: 1;
 }
 
 .g-input:-ms-input-placeholder, .b-search__input:-ms-input-placeholder,
@@ -1005,6 +1008,7 @@ textarea {
 .g-textarea:-ms-input-placeholder {
   color: #888888;
   text-overflow: ellipsis;
+  opacity: 1;
 }
 
 .g-input:hover, .b-search__input:hover, .g-input:focus, .b-search__input:focus,
@@ -1030,34 +1034,78 @@ textarea {
 }
 
 .g-input.error, .error.b-search__input,
+.error > .g-input,
+.error > .b-search__input,
 .g-select.error,
-.g-textarea.error {
+.error >
+.g-select,
+.g-textarea.error,
+.error >
+.g-textarea {
+  color: #ed5c62;
   border-color: red;
-  box-shadow: inset 0 0 4px rgba(255, 0, 0, 0.5);
+  box-shadow: inset 0 0 4px rgba(237, 92, 98, 0.5);
 }
 
 .g-input.error::-webkit-input-placeholder, .error.b-search__input::-webkit-input-placeholder,
+.error > .g-input::-webkit-input-placeholder,
+.error > .b-search__input::-webkit-input-placeholder,
 .g-select.error::-webkit-input-placeholder,
-.g-textarea.error::-webkit-input-placeholder {
-  color: red;
+.error >
+.g-select::-webkit-input-placeholder,
+.g-textarea.error::-webkit-input-placeholder,
+.error >
+.g-textarea::-webkit-input-placeholder {
+  color: #ed5c62;
 }
 
 .g-input.error::-moz-placeholder, .error.b-search__input::-moz-placeholder,
+.error > .g-input::-moz-placeholder,
+.error > .b-search__input::-moz-placeholder,
 .g-select.error::-moz-placeholder,
-.g-textarea.error::-moz-placeholder {
-  color: red;
+.error >
+.g-select::-moz-placeholder,
+.g-textarea.error::-moz-placeholder,
+.error >
+.g-textarea::-moz-placeholder {
+  color: #ed5c62;
 }
 
 .g-input.error:-moz-placeholder, .error.b-search__input:-moz-placeholder,
+.error > .g-input:-moz-placeholder,
+.error > .b-search__input:-moz-placeholder,
 .g-select.error:-moz-placeholder,
-.g-textarea.error:-moz-placeholder {
-  color: red;
+.error >
+.g-select:-moz-placeholder,
+.g-textarea.error:-moz-placeholder,
+.error >
+.g-textarea:-moz-placeholder {
+  color: #ed5c62;
 }
 
 .g-input.error:-ms-input-placeholder, .error.b-search__input:-ms-input-placeholder,
+.error > .g-input:-ms-input-placeholder,
+.error > .b-search__input:-ms-input-placeholder,
 .g-select.error:-ms-input-placeholder,
-.g-textarea.error:-ms-input-placeholder {
-  color: red;
+.error >
+.g-select:-ms-input-placeholder,
+.g-textarea.error:-ms-input-placeholder,
+.error >
+.g-textarea:-ms-input-placeholder {
+  color: #ed5c62;
+}
+
+.g-input.valid, .valid.b-search__input,
+.valid > .g-input,
+.valid > .b-search__input,
+.g-select.valid,
+.valid >
+.g-select,
+.g-textarea.valid,
+.valid >
+.g-textarea {
+  border-color: #37c597;
+  box-shadow: inset 0 0 4px rgba(55, 197, 151, 0.5);
 }
 
 .g-input, .b-search__input,
@@ -1072,10 +1120,6 @@ textarea {
 .g-label {
   display: block;
   margin-bottom: 6px;
-}
-
-.g-label.error {
-  color: red;
 }
 
 .g-label__body {
@@ -1108,6 +1152,15 @@ input[type="radio"] {
 
 .g-input-field.required:after {
   display: block;
+}
+
+.g-input-field > label.error {
+  font-size: 0.625rem;
+  color: #ed5c62;
+  position: absolute;
+  left: 0;
+  bottom: 7px;
+  font-style: italic;
 }
 
 .g-input-file {
@@ -3742,6 +3795,81 @@ input[type="radio"] {
   border-color: #fff;
 }
 
+.f-form .g-input.error, .f-form .error.b-search__input,
+.error > .f-form .g-input,
+.error > .f-form .b-search__input,
+.f-form .g-select.error,
+.error >
+.f-form .g-select,
+.f-form .g-textarea.error,
+.error >
+.f-form .g-textarea {
+  color: #ed5c62;
+  border-color: red;
+  box-shadow: inset 0 0 4px rgba(237, 92, 98, 0.5);
+}
+
+.f-form .g-input.error::-webkit-input-placeholder, .f-form .error.b-search__input::-webkit-input-placeholder,
+.error > .f-form .g-input::-webkit-input-placeholder,
+.error > .f-form .b-search__input::-webkit-input-placeholder,
+.f-form .g-select.error::-webkit-input-placeholder,
+.error >
+.f-form .g-select::-webkit-input-placeholder,
+.f-form .g-textarea.error::-webkit-input-placeholder,
+.error >
+.f-form .g-textarea::-webkit-input-placeholder {
+  color: #ed5c62;
+}
+
+.f-form .g-input.error::-moz-placeholder, .f-form .error.b-search__input::-moz-placeholder,
+.error > .f-form .g-input::-moz-placeholder,
+.error > .f-form .b-search__input::-moz-placeholder,
+.f-form .g-select.error::-moz-placeholder,
+.error >
+.f-form .g-select::-moz-placeholder,
+.f-form .g-textarea.error::-moz-placeholder,
+.error >
+.f-form .g-textarea::-moz-placeholder {
+  color: #ed5c62;
+}
+
+.f-form .g-input.error:-moz-placeholder, .f-form .error.b-search__input:-moz-placeholder,
+.error > .f-form .g-input:-moz-placeholder,
+.error > .f-form .b-search__input:-moz-placeholder,
+.f-form .g-select.error:-moz-placeholder,
+.error >
+.f-form .g-select:-moz-placeholder,
+.f-form .g-textarea.error:-moz-placeholder,
+.error >
+.f-form .g-textarea:-moz-placeholder {
+  color: #ed5c62;
+}
+
+.f-form .g-input.error:-ms-input-placeholder, .f-form .error.b-search__input:-ms-input-placeholder,
+.error > .f-form .g-input:-ms-input-placeholder,
+.error > .f-form .b-search__input:-ms-input-placeholder,
+.f-form .g-select.error:-ms-input-placeholder,
+.error >
+.f-form .g-select:-ms-input-placeholder,
+.f-form .g-textarea.error:-ms-input-placeholder,
+.error >
+.f-form .g-textarea:-ms-input-placeholder {
+  color: #ed5c62;
+}
+
+.f-form .g-input.valid, .f-form .valid.b-search__input,
+.valid > .f-form .g-input,
+.valid > .f-form .b-search__input,
+.f-form .g-select.valid,
+.valid >
+.f-form .g-select,
+.f-form .g-textarea.valid,
+.valid >
+.f-form .g-textarea {
+  border-color: #37c597;
+  box-shadow: inset 0 0 4px rgba(55, 197, 151, 0.5);
+}
+
 .f-form__header {
   margin-bottom: 30px;
   text-align: center;
@@ -3832,7 +3960,11 @@ input[type="radio"] {
 .modal__content .g-input, .modal__content .b-search__input,
 .modal__content .g-select,
 .modal__content .g-textarea {
-  margin-bottom: 10px;
+  margin-bottom: 14px;
+}
+
+.modal__content .g-input-field > label.error {
+  bottom: 0;
 }
 
 .modal__close {

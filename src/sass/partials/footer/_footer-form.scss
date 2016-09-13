@@ -1,6 +1,7 @@
 ﻿@import "../../modules/_base.scss";
 /*Footer order form*/
 $f-color:#a2a0c3;
+$brand-red:#ed5c62;
 .b-footer__form{
     padding:30px 0;
 
@@ -34,6 +35,23 @@ $f-color:#a2a0c3;
         &:hover,
         &:focus{
             border-color:#fff;
+        }
+
+        &.error,
+        .error > &{
+            color:$brand-red;
+            border-color:red;
+            box-shadow:inset 0 0 4px rgba($brand-red, .5);
+
+            @include placeholder{
+                color:$brand-red;
+            }
+        }
+
+        &.valid,
+        .valid > &{
+            border-color:$primary-alt;
+            box-shadow:inset 0 0 4px rgba($primary-alt, .5);
         }
     }
 }

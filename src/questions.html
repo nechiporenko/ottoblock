@@ -29,25 +29,25 @@
             </header>
             
             <section class="page__part">
-                <form class="g-inner">
+                <form class="g-inner" id="send_quest">
                     <h2 class="g-subtitle g-text-center">Задать вопрос</h2>
                     <div class="g-row">
                         <div class="g-col g-col--one-half">
                             <div class="g-input-field">
                                 <label class="g-visuallyhidden">Ваше имя</label>
-                                <input type="text" class="g-input" placeholder="Ваше имя" required />
+                                <input type="text" class="g-input" placeholder="Ваше имя" name="snq_name" id="snq_name" required />
                             </div>
                         </div>
                         <div class="g-col g-col--one-half">
                             <div class="g-input-field">
                                 <label class="g-visuallyhidden">Ваш email</label>
-                                <input type="email" class="g-input" placeholder="Ваш email" required />
+                                <input type="email" class="g-input" placeholder="Ваш email" name="snq_mail" id="snq_mail" required />
                             </div>
                         </div>
                     </div>
                     <div class="g-input-field">
                         <label class="g-visuallyhidden">Вопрос</label>
-                        <textarea class="g-textarea" placeholder="Ваш вопрос" required></textarea>
+                        <textarea class="g-textarea" placeholder="Ваш вопрос" name="snq_msg" id="snq_msg" required></textarea>
                     </div>
                     <div class="g-text-center">
                         <button type="submit" class="g-btn">Отправить</button>

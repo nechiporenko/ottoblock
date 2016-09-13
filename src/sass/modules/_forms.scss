@@ -13,6 +13,8 @@ textarea {
     @include appearance(none);
 }
 
+$brand-red:#ed5c62;
+
 .g-input,
 .g-select,
 .g-textarea{
@@ -31,6 +33,7 @@ textarea {
     @include placeholder{
         color:#888888;
         text-overflow:ellipsis;
+        opacity:1;
     }
 
     &:hover,
@@ -48,13 +51,21 @@ textarea {
         box-shadow:inset 0 0 4px rgba($border-color, .8);
     }
 
-    &.error{
+    &.error,
+    .error > &{
+        color:$brand-red;
         border-color:red;
-        box-shadow:inset 0 0 4px rgba(red, .5);
+        box-shadow:inset 0 0 4px rgba($brand-red, .5);
 
         @include placeholder{
-            color:red;
+            color:$brand-red;
         }
+    }
+
+    &.valid,
+    .valid > &{
+        border-color:$primary-alt;
+        box-shadow:inset 0 0 4px rgba($primary-alt, .5);
     }
 }
 
@@ -70,10 +81,6 @@ textarea {
 .g-label{
     display: block;
     margin-bottom:$project-line-height/3;
-
-    &.error{
-        color:red;
-    }
 }
 .g-label__body{
     display: inline-block;
@@ -97,13 +104,21 @@ input[type="radio"] {
         position:absolute;
         top:-10px;
         right:0;
-        color:#ed5c62;
+        color:$brand-red;
     }
 
     &.required{//покажем скриптом
         &:after{
             display:block;
         }
+    }
+
+    & > label.error{//для подсказок jquery validate
+        font-size:rem(10px);
+        color:$brand-red;
+        position:absolute;
+        left:0; bottom:7px;
+        font-style:italic;
     }
 }
 

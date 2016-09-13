@@ -56,7 +56,13 @@
     .g-input,
     .g-select,
     .g-textarea{
-        margin-bottom:10px;
+        margin-bottom:14px;
+    }
+
+    .g-input-field{
+        & > label.error{//для подсказок jquery validate
+            bottom:0;
+        }
     }
 }
 .modal__close{
