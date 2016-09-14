@@ -1,3 +1,57 @@
+//Modal windows:
+
+(function ($) {
+    //пример вызова:
+    //$('#modal_id').popup('open')  - открыть
+    //$('#modal_id').popup('close') - закрыть
+
+    $.fn.popup = function (action) {
+        var modal_id = this.selector, //id окна
+            $modal = $(modal_id), //контент окна
+            $body = $('body'),
+            $window = $(window),
+            $overlay = $('#overlay'),
+            $close = $('<button type="button" class="modal__close"><i class="icon-cancel"></i></button>'), //иконка закрыть
+            method = {};
+
+        method.center = function () {//центрируем окно
+            var top, left;
+            top = Math.max($window.height() - $modal.outerHeight(), 0) / 2;
+            left = Math.max($window.width() - $modal.outerWidth(), 0) / 2;
+
+            $modal.css({
+                top: top + $window.scrollTop(),
+                left: left + $window.scrollLeft()
+            });
+        };
+
+        method.open = function () {//открываем
+            method.center();//отцентрировали
+            $window.bind('resize.modal', method.center);//при ресайзе - пересчитаем положение окна
+            $modal.append($close).show();
+            $('#overlay').show().bind('click', method.close);
+        };
+
+        method.close = function () {//закрываем окно
+            $modal.hide().find('iframe').attr('src', '');//если в модальном окне было видео - убъем
+            $('#overlay').hide().unbind('click', method.close);
+            $window.unbind('resize.modal');
+        };
+
+        $modal.on('click', '.modal__close', method.close); //закроем окно при клике по кнопке
+
+        if (action === 'open' && $modal.length) {//открываем
+            method.open();
+        };
+
+        if (action === 'close') {//закрываем
+            method.close();
+        };
+    };
+
+}(jQuery));
+
+
 // Application Scripts:
 
 // Десктоп меню (выпадайки)
@@ -6,7 +60,7 @@
 // Покажем - спрячем форму поиска
 // Загрузка изображений при скролле
 // Кнопка скролла страницы
-// Модальное окно
+// Вызов модального окна
 // Маска для телефонного номера
 // Hero-слайдер
 // History-слайдер
@@ -181,64 +235,19 @@ jQuery(document).ready(function ($) {
         });
     })();
 
+    
     //
-    // Модальное окно
+    // Вызов модального окна
     //---------------------------------------------------------------------------------------
-    var showModal = (function (link) {
-        var
-        method = {},
-        $modal,
-        $window = $(window),
-        $overlay = $('#overlay'),
-        $close;
+    $(document).on('click', '[data-modal]', function (e) {
+        e.preventDefault();
+        var id = $(this).data('modal'),
+            $modal = $(id);
+        if ($modal.length) {
+            $modal.popup('open');
+        }
+    });
 
-        $close = $('<button type="button" class="modal__close"><i class="icon-cancel"></i></button>'); //иконка закрыть
-
-
-        $close.on('click', function (e) {
-            e.preventDefault();
-            method.close();
-        });
-
-        // центрируем окно
-        method.center = function () {
-            var top, left;
-            top = Math.max($window.height() - $modal.outerHeight(), 0) / 2;
-            left = Math.max($window.width() - $modal.outerWidth(), 0) / 2;
-
-            $modal.css({
-                top: top + $window.scrollTop(),
-                left: left + $window.scrollLeft()
-            });
-        };
-
-
-        // открываем
-        method.open = function (link) {
-            $modal = $(link);
-            $modal.append($close);
-            method.center();
-            $window.bind('resize.modal', method.center);
-            $modal.show();
-            $overlay.show().bind('click', method.close);
-        };
-
-        // закрываем
-        method.close = function () {
-            $modal.hide().find('iframe').attr('src', '');//если в модальном окне было видео - убъем
-            $overlay.hide().unbind('click', method.close);
-            $window.unbind('resize.modal');
-        };
-
-        // клик по кнопке с атрибутом data-modal - открываем модальное окно
-        $('[data-modal]').on('click', function (e) {//передаем айди модального окна
-            e.preventDefault();
-            var link = $(this).data('modal');
-            if (link) { showModal.open(link); }
-        });
-
-        return method;
-    }());
 
     //
     // Маска для телефонного номера
