@@ -935,7 +935,7 @@ jQuery(document).ready(function ($) {
                 var $modal = $('#videomodal');
                 $modal.find('iframe').attr('src', 'https://www.youtube.com/embed/' + id + '?rel=0&amp;showinfo=0;autoplay=1');//передали ссылку на видео
                 $modal.find('.g-subtitle').text(title);//передали название
-                showModal.open('#videomodal');
+                $modal.popup('open');
             };
         });
     };
@@ -1088,7 +1088,7 @@ jQuery(document).ready(function ($) {
             var $modal = $('#videomodal');
             $modal.find('iframe').attr('src', 'https://www.youtube.com/embed/' + id + '?rel=0&amp;showinfo=0;autoplay=1');//передали ссылку на видео
             $modal.find('.g-subtitle').text(title);//передали название
-            showModal.open('#videomodal');
+            $modal.popup('open');
         };
     });
 
