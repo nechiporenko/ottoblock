@@ -1696,18 +1696,19 @@ input[type="radio"] {
   text-decoration: none;
   color: #000;
   box-sizing: border-box;
+  text-align: center;
 }
 
 .h-logo__inner {
   margin: 0;
   padding: 0;
+  width: 100%;
   max-width: 190px;
   overflow: hidden;
 }
 
 .h-logo__caption {
   display: none;
-  white-space: nowrap;
   line-height: 1.2;
   font-size: 8px;
   font-size: 0.5rem;
@@ -1727,6 +1728,7 @@ input[type="radio"] {
   display: block;
   width: 80px;
   height: auto;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 62em) {
@@ -1737,7 +1739,7 @@ input[type="radio"] {
   }
   .h-logo__img {
     width: 142px;
-    margin: 5px 0;
+    margin: 5px auto;
   }
   .h-logo__caption {
     display: block;

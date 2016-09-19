@@ -11,17 +11,19 @@
     text-decoration:none;
     color:$text-color;
     box-sizing:border-box;
+    text-align:center;
 }
 .h-logo__inner{
     margin:0;
     padding:0;
+    width:100%;
     max-width:190px;
     overflow:hidden;
     @extend .g-align;
 }
 .h-logo__caption{
     display:none;
-    white-space:nowrap;
+    //white-space:nowrap;
     line-height:1.2;
     @include font-size(8px);
     text-transform:uppercase;
@@ -36,6 +38,7 @@
     display:block;
     width:80px;
     height:auto;
+    margin:0 auto;
 }
 
 @include media($desktop){
@@ -47,7 +50,7 @@
 
     .h-logo__img{
         width:142px;
-        margin:5px 0;
+        margin:5px auto;
     }
 
     .h-logo__caption{
