@@ -28,7 +28,13 @@
         method.open = function () {//открываем
             method.center();//отцентрировали
             $window.bind('resize.modal', method.center);//при ресайзе - пересчитаем положение окна
-            $modal.append($close).show();
+
+            var isCloseExist = $modal.find('.modal__close').length;
+            if (isCloseExist < 1) {//если открываем первый раз - добавляем кнопку Закрыть
+                $modal.append($close);
+            };
+
+            $modal.show();
             $('#overlay').show().bind('click', method.close);
         };
 
